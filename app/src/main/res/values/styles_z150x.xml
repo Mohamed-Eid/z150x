@@ -3,6 +3,26 @@
 <resources>
     <style name="Z" />
 
+    <!-- An onboarding step is a scrolling body over buttons that stay on screen: nothing is cut
+         off on a short screen, with a large font size or a long translation. -->
+    <style name="Z.Scroll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:overScrollMode">ifContentScrolls</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">20dp</item>
+    </style>
+
+    <style name="Z.ScrollBody">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
     <style name="Z.Title">
         <item name="android:textDirection">locale</item>
         <item name="android:layout_width">match_parent</item>
@@ -11,14 +31,14 @@
         <item name="android:fontFamily">@font/barlow_condensed_extrabold_italic</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:textColor">@color/text_primary</item>
-        <item name="android:textSize">42sp</item>
+        <item name="android:textSize">@dimen/z_title_size</item>
     </style>
 
     <style name="Z.Sub">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">8dp</item>
-        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="lineHeight">@dimen/z_sub_line_height</item>
         <item name="android:textDirection">locale</item>
         <item name="android:textColor">@color/text_secondary</item>
         <item name="android:textSize">16sp</item>
@@ -27,11 +47,14 @@
     <style name="Z.Row">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginTop">@dimen/z_row_gap</item>
         <item name="android:background">@drawable/bg_z_card</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">@dimen/z_row_pad_v</item>
+        <item name="android:paddingBottom">@dimen/z_row_pad_v</item>
     </style>
 
     <style name="Z.RowIcon">
@@ -62,6 +85,8 @@
         <item name="android:textDirection">locale</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/z_row_sub_lift</item>
+        <item name="lineHeight">@dimen/z_row_sub_line_height</item>
         <item name="android:textColor">@color/text_secondary</item>
         <item name="android:textSize">14sp</item>
     </style>

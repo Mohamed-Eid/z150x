@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ScrollView style="@style/Z.Scroll">
+
+    <LinearLayout style="@style/Z.ScrollBody">
+
     <TextView
         android:id="@+id/ob_lang_title"
         style="@style/Z.Title"
@@ -23,7 +27,10 @@
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
-        android:orientation="vertical">
+        android:minHeight="120dp"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,7 +38,7 @@
             android:fontFamily="@font/cairo_extrabold"
             android:text="@string/z_ob_arabic"
             android:textColor="@color/white"
-            android:textSize="56sp" />
+            android:textSize="@dimen/z_lang_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -52,7 +59,10 @@
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
-        android:orientation="vertical">
+        android:minHeight="120dp"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,7 +70,7 @@
             android:fontFamily="@font/barlow_condensed_extrabold_italic"
             android:text="@string/z_ob_english"
             android:textColor="@color/text_primary"
-            android:textSize="56sp" />
+            android:textSize="@dimen/z_lang_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -71,10 +81,13 @@
             android:textSize="16sp" />
     </LinearLayout>
 
+    </LinearLayout>
+    </ScrollView>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/z_ob_lang_hint"
         android:textColor="@color/text_secondary"

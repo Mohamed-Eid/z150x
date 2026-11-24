@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cairo is taller and wider than Barlow Condensed: smaller headline, tighter lines and rows. -->
+<resources>
+    <dimen name="z_title_size">36sp</dimen>
+    <dimen name="z_sub_line_height">25sp</dimen>
+    <dimen name="z_row_pad_v">9dp</dimen>
+    <dimen name="z_row_gap">8dp</dimen>
+    <dimen name="z_row_sub_lift">-5dp</dimen>
+    <dimen name="z_lang_size">48sp</dimen>
+    <dimen name="z_row_sub_line_height">22sp</dimen>
+</resources>

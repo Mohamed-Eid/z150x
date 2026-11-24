@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ScrollView style="@style/Z.Scroll">
+
+    <LinearLayout style="@style/Z.ScrollBody">
+
     <TextView
         android:id="@+id/ob_scan_title"
         style="@style/Z.Title"
@@ -80,10 +84,13 @@
             android:textSize="15sp" />
     </LinearLayout>
 
+    </LinearLayout>
+    </ScrollView>
+
     <TextView
         android:id="@+id/ob_scan_start"
         style="@style/Z.Primary"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="10dp"
         android:text="@string/z_scan_start" />
 
     <TextView

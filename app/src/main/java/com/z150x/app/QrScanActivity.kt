@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -19,6 +20,8 @@ import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
@@ -53,6 +56,15 @@ class QrScanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_qr_scan)
+        // The preview runs edge to edge; keep the hint and its buttons clear of the navigation bar.
+        val panel = findViewById<View>(R.id.qr_panel)
+        val basePad = panel.paddingBottom
+        val sidePad = panel.paddingLeft
+        ViewCompat.setOnApplyWindowInsetsListener(panel) { v, insets ->
+            val b = insets.getInsets(SafeInsets.BARS or WindowInsetsCompat.Type.displayCutout())
+            v.setPadding(sidePad + b.left, v.paddingTop, sidePad + b.right, basePad + b.bottom)
+            insets
+        }
         findViewById<Button>(R.id.btn_qr_photo).setOnClickListener {
             photoPicker.launch("image/*")
         }

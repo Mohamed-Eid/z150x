@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Z150X onboarding sizes. Arabic (values-ar) overrides them: Cairo's line box is about 1.9 em
+     tall against Barlow's 1.2 em, so the same sp and padding take far more height. -->
+<resources>
+    <dimen name="z_title_size">42sp</dimen>
+    <dimen name="z_sub_line_height">21sp</dimen>
+    <dimen name="z_row_pad_v">16dp</dimen>
+    <dimen name="z_row_gap">10dp</dimen>
+    <dimen name="z_row_sub_lift">0dp</dimen>
+    <dimen name="z_lang_size">56sp</dimen>
+    <dimen name="z_row_sub_line_height">18sp</dimen>
+</resources>
