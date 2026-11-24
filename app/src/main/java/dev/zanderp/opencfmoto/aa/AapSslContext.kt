@@ -259,7 +259,7 @@ class AapSslContext(keyManager: SingleKeyKeyManager) : AapSsl {
                 SSLContext.getInstance("TLS")
             }
             return sslContext.apply {
-                init(arrayOf(keyManager), arrayOf(NoCheckTrustManager()), null)
+                init(arrayOf(keyManager), arrayOf(AaPeerTrustManager(keyManager.certificate.publicKey)), null)
             }
         }
     }

@@ -7,8 +7,9 @@ import java.security.cert.Certificate
 /**
  * Who is on the other end of the Android Auto link?
  *
- * The link is a loopback TCP socket and its TLS accepts any certificate (the head unit side has no
- * Google root to check against), so "it came from 127.0.0.1" was the only test. Any app on the phone
+ * The link is a loopback TCP socket and its TLS cannot validate the peer's chain (the head unit side
+ * has no Google root to check against; [AaPeerTrustManager] only refuses a peer with no certificate
+ * or with the head unit's own), so "it came from 127.0.0.1" was the only test. Any app on the phone
  * with the INTERNET permission could therefore play Android Auto, ask for the microphone and get the
  * rider's voice through this app's RECORD_AUDIO grant.
  *

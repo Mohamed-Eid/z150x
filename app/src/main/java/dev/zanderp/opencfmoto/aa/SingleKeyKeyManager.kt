@@ -19,7 +19,7 @@ import javax.net.ssl.SSLEngine
 import javax.net.ssl.X509ExtendedKeyManager
 import javax.net.ssl.X509KeyManager
 
-class SingleKeyKeyManager(certificate: X509Certificate, privateKey: PrivateKey) : X509ExtendedKeyManager() {
+class SingleKeyKeyManager(val certificate: X509Certificate, privateKey: PrivateKey) : X509ExtendedKeyManager() {
 
     constructor(context: Context) : this(createCertificate(context), createPrivateKey(context))
 
