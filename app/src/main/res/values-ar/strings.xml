@@ -29,7 +29,7 @@
     <string name="buttons_teach_volume_absent">▲/▼ مش موجودين</string>
     <string name="buttons_teach_reset">رجّعها «مش متجرّبة»</string>
     <string name="buttons_your_left_switch_cluster">مجموعة الزراير الشمال عندك</string>
-    <string name="buttons_cfmoto_ships_a_few_different_left_pods_pick_the_">CFMOTO بتنزّل كذا شكل لمجموعة الزراير الشمال. اختار اللي شبه اللي عندك — الدوسة المزدوجة والدوسة المطوّلة مش بيشتغلوا بنفس الطريقة على كل مجموعة.</string>
+    <string name="buttons_cfmoto_ships_a_few_different_left_pods_pick_the_">مجموعات زراير الشمال بتختلف. اختار اللي شبه اللي عندك — الدوسة المزدوجة والدوسة المطوّلة مش بيشتغلوا بنفس الطريقة على كل مجموعة.</string>
     <string name="buttons_no_preset_shipped_defaults_your_custom_map">من غير إعداد جاهز — الافتراضي أو التوزيع بتاعك</string>
     <string name="buttons_apply_preset">طبّق إعداد جاهز…</string>
     <string name="buttons_clear_preset">شيل الإعداد الجاهز</string>
@@ -63,7 +63,7 @@
     <string name="controls_home">الرئيسية</string>
     <string name="controls_voice">المساعد</string>
     <string name="controls_handlebar_buttons">زراير الهاندل</string>
-    <string name="controls_your_dash_is_a_touchscreen_just_tap_the_screen_t">شاشتك تاتش — المس الشاشة على طول عشان تتنقّل. التحكم بزراير الهاندل معمول للشاشات اللي مش تاتش (زي 450SR)؛ على الموتوسيكل ده مش هيحرّك القايمة وهيوقّف المزيكا مؤقتاً بس.</string>
+    <string name="controls_your_dash_is_a_touchscreen_just_tap_the_screen_t">شاشتك تاتش — المس الشاشة على طول عشان تتنقّل. التحكم بزراير الهاندل معمول للشاشات اللي مش تاتش؛ على الموتوسيكل ده مش هيحرّك القايمة وهيوقّف المزيكا مؤقتاً بس.</string>
     <string name="controls_handlebar_buttons_drive_android_auto">زراير الهاندل تتحكم في أندرويد أوتو</string>
     <string name="controls_requires_the_phone_paired_to_the_bike_over_bluet">لازم الموبايل يكون متربط بالموتوسيكل بالبلوتوث.\n\nوهو شغال، الزراير بتتحكم في واجهة أندرويد أوتو (مش تقليب التراكات). المزيكا ممكن تفضل شغالة — شغّل أو وقّف أو قلّب بإنك تتنقّل في الواجهة بالزراير أو بأسهم الموبايل. اقفله بس لو عايز الزراير ترجع تتحكم في الميديا تاني.</string>
     <string name="controls_customize_buttons">خصّص الزراير</string>
@@ -91,7 +91,7 @@
     <string name="main_trip">المشوار</string>
     <string name="qr_point_the_camera_at_the_bike_s_motoplay_qr_if_it">وجّه الكاميرا على كود الربط اللي على الشاشة\n\nفي الـZ150X: دوس مطوّل على ▲ لحد ما الكود يظهر. لو مش راضي يتمسح، اكتب الواي فاي يدوي.</string>
     <string name="margins_screen_margins">هوامش الشاشة</string>
-    <string name="margins_inset_android_auto_from_each_edge_of_the_dash_pi">بعّد أندرويد أوتو عن كل حافة من حواف الشاشة (بالبكسل). على 800NK Advanced، زوّد هامش من فوق عشان مقبض السحب بتاع MotoPlay مايخطفش السحبات.</string>
+    <string name="margins_inset_android_auto_from_each_edge_of_the_dash_pi">بعّد أندرويد أوتو عن كل حافة من حواف الشاشة (بالبكسل).</string>
     <string name="margins_top">فوق</string>
     <string name="margins_bottom">تحت</string>
     <string name="margins_left">شمال</string>
@@ -128,7 +128,7 @@
     <string name="setup_fit">احتواء</string>
     <string name="setup_stretch">مط</string>
     <string name="setup_screen_margins">هوامش الشاشة…</string>
-    <string name="setup_inset_android_auto_from_each_edge_of_the_dash_to">بعّد أندرويد أوتو عن كل حافة من حواف الشاشة (فوق / تحت / شمال / يمين). مفيد في 800NK Advanced عشان مقبض السحب بتاع MotoPlay.</string>
+    <string name="setup_inset_android_auto_from_each_edge_of_the_dash_to">بعّد أندرويد أوتو عن كل حافة من حواف الشاشة (فوق / تحت / شمال / يمين).</string>
     <string name="setup_auto_day_night">تلقائي (نهار / ليل)</string>
     <string name="setup_resolution_orientation">الدقة والاتجاه</string>
     <string name="setup_auto_match_your_bike_recommended">تلقائي — على مقاس موتوسيكلك (ننصح بيه)</string>
@@ -143,8 +143,8 @@
     <string name="setup_turn_on_if_handlebar_buttons_do_nothing_android_">شغّله لو زراير الهاندل مش بتعمل حاجة: أندرويد أوتو بيشتغل في وضع التركيز/العجلة (من غير ما يعلن عن تاتش) عشان ▲/▼/Enter يشتغلوا. بيتطبق في التوصيل الجاي — وقّف الأول لو انت شغال دلوقتي.</string>
     <string name="setup_force_touchscreen">إجبار التاتش</string>
     <string name="setup_forcetouch_on_desc">شغال — واجهة أندرويد أوتو التاتش (المس الشاشة)</string>
-    <string name="setup_off_use_the_bike_profile_1000_mt_x_stays_focus_k">مقفول — استخدم بروفايل الموتوسيكل (1000 MT‑X يفضل تركيز/عجلة)</string>
-    <string name="setup_turn_on_for_a_touch_panel_on_a_focus_knob_profil">شغّله لو عندك شاشة تاتش على بروفايل تركيز/عجلة (زي 1000 MT‑X): أندرويد أوتو بيعلن إن فيه تاتش عشان تقدر تلمس الشاشة. بيقفل «اقفل التاتش». افتح قفل التاتش بتاع الموتوسيكل نفسه لو محتاج. بيتطبق في التوصيل الجاي — وقّف الأول لو انت شغال دلوقتي.</string>
+    <string name="setup_off_use_the_bike_profile_1000_mt_x_stays_focus_k">مقفول — استخدم بروفايل الموتوسيكل</string>
+    <string name="setup_turn_on_for_a_touch_panel_on_a_focus_knob_profil">شغّله لو عندك شاشة تاتش على بروفايل تركيز/عجلة: أندرويد أوتو بيعلن إن فيه تاتش عشان تقدر تلمس الشاشة. بيقفل «اقفل التاتش». افتح قفل التاتش بتاع الموتوسيكل نفسه لو محتاج. بيتطبق في التوصيل الجاي — وقّف الأول لو انت شغال دلوقتي.</string>
     <string name="setup_battery_power">البطارية والطاقة</string>
     <string name="setup_balanced_24_fps_recommended">متوازن — 24 fps (ننصح بيه)</string>
     <string name="setup_smooth">ناعم</string>
@@ -179,7 +179,7 @@
     <string name="setup_bluetooth_clock">ظبط ساعة الشاشة بالبلوتوث (تجريبي)</string>
     <string name="setup_bluetooth_clock_desc">بعض الشاشات بتطلب الوقت بالبلوتوث مش بالواي فاي، وبتفضل على 00:00 من غيره. اربط الموتوسيكل من إعدادات بلوتوث أندرويد الأول. مقفول افتراضياً — بنرد بس بعد ما الشاشة تتكلم بالبروتوكول بتاعها.</string>
     <string name="setup_clock_lab">معمل الساعة (تجريبي)</string>
-    <string name="setup_clock_lab_desc">حزمة واحدة للمختبرين فيها كل تجارب الساعة — استعلام/مزامنة بالواي فاي، استماع بالبلوتوث (ZT / EC-BTP)، البقاء على واي فاي الموتوسيكل. الافتراضي زي «الأحدث» 2.0.13 (empty 0x10451، echo 0x10600، BLE مقفول). اختار تركيبة، وصّل مرة، وشارك السجل على Discord في #clock-issue. ماتسيبش تركيبة شغالة في المشاوير اليومية.</string>
+    <string name="setup_clock_lab_desc">كل تجارب الساعة في مكان واحد — استعلام/مزامنة بالواي فاي، استماع بالبلوتوث (ZT / EC-BTP)، البقاء على واي فاي الموتوسيكل. الافتراضي: empty 0x10451، echo 0x10600، BLE مقفول. اختار تركيبة، وصّل مرة، وبعدين شارك السجل. ماتسيبش تركيبة شغالة في المشاوير اليومية.</string>
     <string name="setup_clock_lab_bt">استماع بالبلوتوث</string>
     <string name="setup_clock_lab_presets">إعدادات جاهزة (بتملا الاختيارات بس)</string>
     <string name="setup_clock_lab_preset_latest">الأحدث</string>
@@ -226,7 +226,7 @@
     <string name="setup_secrets_on_desc">شغال — الباسوردات والسيريالات بتفضل في السجل اللي بتشاركه</string>
     <string name="setup_off_passwords_and_serials_are_redacted_recommend">مقفول — الباسوردات والسيريالات بتتخبى (ننصح بيه)</string>
     <string name="setup_share_settings">شارك الإعدادات</string>
-    <string name="setup_export_bike_tuning_only_profile_resolution_fit_m">صدّر ظبط الموتوسيكل بس — البروفايل، الدقة، الملاءمة، الهوامش، الزراير، طريقة الواي فاي (من غير باسوردات ولا تفضيلات شخصية). شاركه على Discord عشان غيرك يستورده.</string>
+    <string name="setup_export_bike_tuning_only_profile_resolution_fit_m">صدّر ظبط الموتوسيكل بس — البروفايل، الدقة، الملاءمة، الهوامش، الزراير، طريقة الواي فاي (من غير باسوردات ولا تفضيلات شخصية). شارك الملف عشان راكب تاني يستورده.</string>
     <string name="setup_share_json">شارك JSON</string>
     <string name="setup_import">استيراد…</string>
     <string name="trip_trip_computer">عداد المشوار</string>

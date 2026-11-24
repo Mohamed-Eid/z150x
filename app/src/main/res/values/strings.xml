@@ -29,7 +29,7 @@
     <string name="buttons_teach_volume_absent">▲/▼ absent</string>
     <string name="buttons_teach_reset">Reset to untested</string>
     <string name="buttons_your_left_switch_cluster">Your left switch cluster</string>
-    <string name="buttons_cfmoto_ships_a_few_different_left_pods_pick_the_">CFMOTO ships a few different left pods. Pick the one that matches your bars — doubles and long-press do not work the same on every cluster.</string>
+    <string name="buttons_cfmoto_ships_a_few_different_left_pods_pick_the_">Handlebar pods differ. Pick the one that matches your bars — doubles and long-press do not work the same on every cluster.</string>
     <string name="buttons_no_preset_shipped_defaults_your_custom_map">No preset — shipped defaults / your custom map</string>
     <string name="buttons_apply_preset">Apply preset…</string>
     <string name="buttons_clear_preset">Clear preset</string>
@@ -68,7 +68,7 @@
     <string name="controls_home">Home</string>
     <string name="controls_voice">Voice</string>
     <string name="controls_handlebar_buttons">Handlebar buttons</string>
-    <string name="controls_your_dash_is_a_touchscreen_just_tap_the_screen_t">Your dash is a touchscreen — just tap the screen to navigate. Handlebar-button control is meant for non-touch dashes (e.g. 450SR); on this bike it can\'t move the menu and only pauses your music.</string>
+    <string name="controls_your_dash_is_a_touchscreen_just_tap_the_screen_t">Your dash is a touchscreen — just tap the screen to navigate. Handlebar-button control is meant for non-touch dashes; on this bike it can\'t move the menu and only pauses your music.</string>
     <string name="controls_handlebar_buttons_drive_android_auto">Handlebar buttons drive Android Auto</string>
     <string name="controls_requires_the_phone_paired_to_the_bike_over_bluet">Requires the phone paired to the bike over Bluetooth.\n\nWhile on, the bars drive the Android Auto UI (not track-skip). Music can keep playing — start/stop/skip by navigating that UI with the bars or the on-screen pad. Turn OFF only if you want the physical bars to control media again.</string>
     <string name="controls_customize_buttons">Customize buttons</string>
@@ -99,7 +99,7 @@
     <string name="qr_2x" translatable="false">2x</string>
     <string name="qr_3x" translatable="false">3x</string>
     <string name="margins_screen_margins">Screen margins</string>
-    <string name="margins_inset_android_auto_from_each_edge_of_the_dash_pi">Inset Android Auto from each edge of the dash (pixels). On 800NK Advanced, add a top margin so MotoPlay\'s pull-down handle doesn\'t steal swipes.</string>
+    <string name="margins_inset_android_auto_from_each_edge_of_the_dash_pi">Inset Android Auto from each edge of the dash (pixels).</string>
     <string name="margins_top">Top</string>
     <string name="margins_0" translatable="false">0</string>
     <string name="margins_bottom">Bottom</string>
@@ -137,7 +137,7 @@
     <string name="setup_fit">Fit</string>
     <string name="setup_stretch">Stretch</string>
     <string name="setup_screen_margins">Screen margins…</string>
-    <string name="setup_inset_android_auto_from_each_edge_of_the_dash_to">Inset Android Auto from each edge of the dash (top / bottom / left / right). Useful on 800NK Advanced for the MotoPlay pull-down.</string>
+    <string name="setup_inset_android_auto_from_each_edge_of_the_dash_to">Inset Android Auto from each edge of the dash (top / bottom / left / right).</string>
     <string name="setup_auto_day_night">Auto (day / night)</string>
     <string name="setup_resolution_orientation">Resolution &amp; orientation</string>
     <string name="setup_auto_match_your_bike_recommended">Auto — match your bike (recommended)</string>
@@ -156,8 +156,8 @@
     <string name="setup_turn_on_if_handlebar_buttons_do_nothing_android_">Turn On if handlebar buttons do nothing: Android Auto runs in focus/knob mode (no touchscreen advertised) so ▲/▼/Enter work. Needed next Connect — Stop first if you\'re already projecting.</string>
     <string name="setup_force_touchscreen">Force touchscreen</string>
     <string name="setup_forcetouch_on_desc">On — Android Auto touch UI (tap the dash)</string>
-    <string name="setup_off_use_the_bike_profile_1000_mt_x_stays_focus_k">Off — use the bike profile (1000 MT‑X stays focus/knob)</string>
-    <string name="setup_turn_on_for_a_touch_panel_on_a_focus_knob_profil">Turn On for a touch panel on a focus/knob profile (e.g. 1000 MT‑X): Android Auto advertises a touchscreen so you can tap the dash. Turns off Disable touchscreen. Unlock the bike\'s own touch lock if needed. Applies next Connect — Stop first if you\'re already projecting.</string>
+    <string name="setup_off_use_the_bike_profile_1000_mt_x_stays_focus_k">Off — use the bike profile</string>
+    <string name="setup_turn_on_for_a_touch_panel_on_a_focus_knob_profil">Turn On for a touch panel on a focus/knob profile: Android Auto advertises a touchscreen so you can tap the dash. Turns off Disable touchscreen. Unlock the bike\'s own touch lock if needed. Applies next Connect — Stop first if you\'re already projecting.</string>
     <string name="setup_battery_power">Battery &amp; power</string>
     <string name="setup_balanced_24_fps_recommended">Balanced — 24 fps (recommended)</string>
     <string name="setup_smooth">Smooth</string>
@@ -204,7 +204,7 @@
     <string name="setup_bluetooth_clock">Set dash clock over Bluetooth (experimental)</string>
     <string name="setup_bluetooth_clock_desc">Some dashes ask for the time over Bluetooth, not Wi-Fi, and sit at 00:00 without it. Pair the bike in Android Bluetooth settings first. Off by default — we only reply after the dash speaks its own protocol.</string>
     <string name="setup_clock_lab">Clock lab (EXPERIMENTAL)</string>
-    <string name="setup_clock_lab_desc">One tester pack for every clock experiment — Wi‑Fi query/sync, Bluetooth listen (ZT / EC-BTP), stay-on-bike-Wi‑Fi. Defaults match Latest 2.0.13 (empty 0x10451, echo 0x10600, BLE off). Pick a combo, Connect once, Share Logs in Discord #clock-issue. Do not leave a combo on for daily riding.</string>
+    <string name="setup_clock_lab_desc">Every clock experiment in one place — Wi‑Fi query/sync, Bluetooth listen (ZT / EC-BTP), stay-on-bike-Wi‑Fi. Defaults: empty 0x10451, echo 0x10600, BLE off. Pick a combo, Connect once, then share the log. Do not leave a combo on for daily riding.</string>
     <string name="setup_clock_lab_bt">Bluetooth listen</string>
     <string name="setup_clock_lab_presets">Presets (fill the knobs only)</string>
     <string name="setup_clock_lab_preset_latest">Latest</string>
@@ -259,7 +259,7 @@
     <string name="setup_secrets_on_desc">On — passwords/serials stay in shared logs</string>
     <string name="setup_off_passwords_and_serials_are_redacted_recommend">Off — passwords and serials are redacted (recommended)</string>
     <string name="setup_share_settings">Share settings</string>
-    <string name="setup_export_bike_tuning_only_profile_resolution_fit_m">Export bike tuning only — profile, resolution, fit, margins, buttons, Wi‑Fi transport (no passwords, no personal prefs). Share on Discord so others can Import.</string>
+    <string name="setup_export_bike_tuning_only_profile_resolution_fit_m">Export bike tuning only — profile, resolution, fit, margins, buttons, Wi‑Fi transport (no passwords, no personal prefs). Share the file so another rider can Import it.</string>
     <string name="setup_share_json">Share JSON</string>
     <string name="setup_import">Import…</string>
     <string name="trip_trip_computer">Trip computer</string>

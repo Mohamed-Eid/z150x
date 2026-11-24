@@ -110,7 +110,7 @@ object SettingsBackup {
             ProfileOverride.AUTO -> "auto"
             else -> ov.id
         }
-        return "OpenCfMoto-$slug-settings.json"
+        return "Z150X-$slug-settings.json"
     }
 
     private fun applySettings(context: Context, s: JSONObject) {
