@@ -104,7 +104,7 @@
     <string name="setup_a_one_time_setup_so_android_auto_can_project_to_">أندرويد أوتو، وشاشة الـZ150X، والزراير، وخيارات البطارية.</string>
     <string name="setup_get_started">يلا نبدأ</string>
     <string name="setup_1_android_auto">1. أندرويد أوتو</string>
-    <string name="setup_android_auto_runs_maps_waze_opencfmoto_relays_it">أندرويد أوتو بيشغّل خرائط جوجل/Waze. وZ150X بينقل شاشته للموتوسيكل.</string>
+    <string name="setup_android_auto_runs_maps_waze_z150x_relays_it">أندرويد أوتو بيشغّل خرائط جوجل/Waze. وZ150X بينقل شاشته للموتوسيكل.</string>
     <string name="setup_open_android_auto">افتح أندرويد أوتو</string>
     <string name="setup_install_android_auto">نزّل أندرويد أوتو</string>
     <string name="setup_2_permissions">2. الأذونات</string>

@@ -38,7 +38,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/trip_saved_btn"
-            style="@style/Widget.OpenCfMoto.Button.Text"
+            style="@style/Widget.Z150X.Button.Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="0dp"
@@ -59,7 +59,7 @@
 
             <!-- Big live speed -->
             <com.google.android.material.card.MaterialCardView
-                style="@style/Card.OpenCfMoto"
+                style="@style/Card.Z150X"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp">
@@ -111,7 +111,7 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    style="@style/Card.OpenCfMoto"
+                    style="@style/Card.Z150X"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
@@ -134,7 +134,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="@style/Card.OpenCfMoto"
+                    style="@style/Card.Z150X"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -165,7 +165,7 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    style="@style/Card.OpenCfMoto"
+                    style="@style/Card.Z150X"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
@@ -188,7 +188,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="@style/Card.OpenCfMoto"
+                    style="@style/Card.Z150X"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -233,7 +233,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/trip_start"
-            style="@style/Widget.OpenCfMoto.Button.Connect"
+            style="@style/Widget.Z150X.Button.Connect"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginEnd="5dp"
@@ -242,7 +242,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/trip_reset"
-            style="@style/Widget.OpenCfMoto.Button.Tonal"
+            style="@style/Widget.Z150X.Button.Tonal"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginStart="5dp"

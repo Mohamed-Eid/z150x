@@ -38,7 +38,7 @@
             android:orientation="horizontal">
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/match_auto"
-                style="@style/Widget.OpenCfMoto.Segment"
+                style="@style/Widget.Z150X.Segment"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
@@ -46,7 +46,7 @@
                 android:text="@string/controls_auto" />
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/match_off"
-                style="@style/Widget.OpenCfMoto.Segment"
+                style="@style/Widget.Z150X.Segment"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="4dp"
@@ -54,7 +54,7 @@
                 android:text="@string/res_off" />
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/match_manual"
-                style="@style/Widget.OpenCfMoto.Segment"
+                style="@style/Widget.Z150X.Segment"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -104,7 +104,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_custom_res_save"
-            style="@style/Widget.OpenCfMoto.Segment"
+            style="@style/Widget.Z150X.Segment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -112,7 +112,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_custom_res_done"
-            style="@style/Widget.OpenCfMoto.Segment"
+            style="@style/Widget.Z150X.Segment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

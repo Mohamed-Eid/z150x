@@ -35,7 +35,7 @@
         <!-- ===== Getting started ===== -->
         <com.google.android.material.card.MaterialCardView
             android:visibility="gone"
-            style="@style/Card.OpenCfMoto"
+            style="@style/Card.Z150X"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp">
@@ -69,13 +69,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="@string/setup_android_auto_runs_maps_waze_opencfmoto_relays_it"
+                    android:text="@string/setup_android_auto_runs_maps_waze_z150x_relays_it"
                     android:textColor="@color/text_secondary"
                     android:textSize="13sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/step1_btn"
-                    style="@style/Widget.OpenCfMoto.Button.Tonal"
+                    style="@style/Widget.Z150X.Button.Tonal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -108,14 +108,14 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/step2_btn"
-                        style="@style/Widget.OpenCfMoto.Button.Tonal"
+                        style="@style/Widget.Z150X.Button.Tonal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/setup_grant_permissions" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/step2_settings_btn"
-                        style="@style/Widget.OpenCfMoto.Button.Text"
+                        style="@style/Widget.Z150X.Button.Text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -152,7 +152,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/step3_btn"
-                    style="@style/Widget.OpenCfMoto.Button.Tonal"
+                    style="@style/Widget.Z150X.Button.Tonal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -162,7 +162,7 @@
 
         <!-- ===== Screen & display ===== -->
         <com.google.android.material.card.MaterialCardView
-            style="@style/Card.OpenCfMoto"
+            style="@style/Card.Z150X"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -183,7 +183,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_fit_to_dash"
-                    style="@style/Widget.OpenCfMoto.Button.Pill"
+                    style="@style/Widget.Z150X.Button.Pill"
                     android:layout_width="match_parent"
                     android:layout_marginTop="12dp"
                     android:text="@string/fit_open" />
@@ -224,7 +224,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/quality_smooth"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -233,7 +233,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/quality_balanced"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="4dp"
@@ -242,7 +242,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/quality_sharp"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -278,7 +278,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/fit_fill"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -287,7 +287,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/fit_fit"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="4dp"
@@ -296,7 +296,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/fit_stretch"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -306,7 +306,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_screen_margins"
-                    style="@style/Widget.OpenCfMoto.Segment"
+                    style="@style/Widget.Z150X.Segment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -349,7 +349,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/theme_auto"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -358,7 +358,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/theme_day"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="4dp"
@@ -367,7 +367,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/theme_night"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -397,7 +397,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/res_auto"
-                    style="@style/Widget.OpenCfMoto.Segment"
+                    style="@style/Widget.Z150X.Segment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/controls_auto" />
@@ -421,7 +421,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/res_land_sd"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -430,7 +430,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/res_land_hd"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -457,7 +457,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/res_port_sd"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -466,7 +466,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/res_port_hd"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -485,7 +485,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_custom_resolution"
-                    style="@style/Widget.OpenCfMoto.Segment"
+                    style="@style/Widget.Z150X.Segment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -512,7 +512,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/dpi_auto"
-                    style="@style/Widget.OpenCfMoto.Segment"
+                    style="@style/Widget.Z150X.Segment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/setup_aa_dpi_auto" />
@@ -526,7 +526,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dpi_160"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -535,7 +535,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dpi_180"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -552,7 +552,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dpi_240"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -561,7 +561,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dpi_320"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -596,7 +596,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/nontouch_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -605,7 +605,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/nontouch_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -649,7 +649,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/forcetouch_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -658,7 +658,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/forcetouch_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -679,7 +679,7 @@
 
         <!-- ===== Battery ===== -->
         <com.google.android.material.card.MaterialCardView
-            style="@style/Card.OpenCfMoto"
+            style="@style/Card.Z150X"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -716,7 +716,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/power_auto"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -725,7 +725,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/power_smooth"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="4dp"
@@ -734,7 +734,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/power_balanced"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="4dp"
@@ -743,7 +743,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/power_saver"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -765,7 +765,7 @@
         <!-- ===== Bike profile ===== -->
         <com.google.android.material.card.MaterialCardView
             android:visibility="gone"
-            style="@style/Card.OpenCfMoto"
+            style="@style/Card.Z150X"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -796,7 +796,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/profile_auto"
-                    style="@style/Widget.OpenCfMoto.Segment"
+                    style="@style/Widget.Z150X.Segment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/controls_auto" />
@@ -810,7 +810,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/profile_legacy"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -819,7 +819,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/profile_nk800"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -836,7 +836,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/profile_800mt"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -845,7 +845,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/profile_1000mtx"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -862,7 +862,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/profile_nk_adv"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -871,7 +871,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/profile_clc450"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -892,7 +892,7 @@
 
         <!-- ===== Handlebar ===== -->
         <com.google.android.material.card.MaterialCardView
-            style="@style/Card.OpenCfMoto"
+            style="@style/Card.Z150X"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -938,7 +938,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dbltap_fast"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -947,7 +947,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dbltap_normal"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="4dp"
@@ -956,7 +956,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dbltap_slow"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="4dp"
@@ -965,7 +965,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dbltap_very_slow"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1000,7 +1000,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/holds_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1009,7 +1009,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/holds_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1044,7 +1044,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/hold_short"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1053,7 +1053,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/hold_normal"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="4dp"
@@ -1062,7 +1062,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/hold_long"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1074,7 +1074,7 @@
 
         <!-- ===== Bluetooth (handlebar buttons & calls) ===== -->
         <com.google.android.material.card.MaterialCardView
-            style="@style/Card.OpenCfMoto"
+            style="@style/Card.Z150X"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -1123,7 +1123,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/bt_settings_btn"
-                    style="@style/Widget.OpenCfMoto.Button.Tonal"
+                    style="@style/Widget.Z150X.Button.Tonal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -1133,7 +1133,7 @@
 
         <!-- ===== Startup & recovery ===== -->
         <com.google.android.material.card.MaterialCardView
-            style="@style/Card.OpenCfMoto"
+            style="@style/Card.Z150X"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -1180,7 +1180,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/autoconnect_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1189,7 +1189,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/autoconnect_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1218,7 +1218,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_bt_trigger"
-                    style="@style/Widget.OpenCfMoto.Segment"
+                    style="@style/Widget.Z150X.Segment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/setup_bt_trigger_none" />
@@ -1292,7 +1292,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/recovery_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1301,7 +1301,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/recovery_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1332,7 +1332,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/resume_perm_btn"
-                    style="@style/Widget.OpenCfMoto.Segment"
+                    style="@style/Widget.Z150X.Segment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/setup_enable_seamless_resume" />
@@ -1341,7 +1341,7 @@
 
         <!-- ===== Clock lab — every clock experiment lives here ===== -->
         <com.google.android.material.card.MaterialCardView
-            style="@style/Card.OpenCfMoto"
+            style="@style/Card.Z150X"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -1387,7 +1387,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_preset_latest"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1396,7 +1396,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_preset_2012"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1406,7 +1406,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_preset_zontes"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1423,7 +1423,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_preset_phone"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1432,7 +1432,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_preset_bt"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1458,7 +1458,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_query_empty"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1467,7 +1467,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_query_carbit"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1484,7 +1484,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_query_zontes"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1493,7 +1493,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_query_none"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1519,7 +1519,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_sync_echo"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1528,7 +1528,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clocklab_sync_phone"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1563,7 +1563,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btclock_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1572,7 +1572,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btclock_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1607,7 +1607,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/keepwifi_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1616,7 +1616,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/keepwifi_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1650,7 +1650,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clockresync_smart"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="3dp"
@@ -1659,7 +1659,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clockresync_once"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="3dp"
@@ -1668,7 +1668,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/clockresync_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
@@ -1680,7 +1680,7 @@
 
         <!-- ===== Ride extras ===== -->
         <com.google.android.material.card.MaterialCardView
-            style="@style/Card.OpenCfMoto"
+            style="@style/Card.Z150X"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -1726,7 +1726,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/logtrips_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1735,7 +1735,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/logtrips_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1769,7 +1769,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/extras_park_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1778,7 +1778,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/extras_park_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1812,7 +1812,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/extras_rain_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1821,7 +1821,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/extras_rain_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1834,7 +1834,7 @@
 
         <!-- ===== Wi‑Fi & logs ===== -->
         <com.google.android.material.card.MaterialCardView
-            style="@style/Card.OpenCfMoto"
+            style="@style/Card.Z150X"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -1880,7 +1880,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/transport_auto"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1889,7 +1889,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/transport_ap"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="4dp"
@@ -1898,7 +1898,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/transport_p2p"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1943,7 +1943,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/secrets_on"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1952,7 +1952,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/secrets_off"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -1986,7 +1986,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/settings_share"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -1995,7 +1995,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/settings_import"
-                        style="@style/Widget.OpenCfMoto.Segment"
+                        style="@style/Widget.Z150X.Segment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -2007,7 +2007,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/setup_done_btn"
-            style="@style/Widget.OpenCfMoto.Button.Connect"
+            style="@style/Widget.Z150X.Button.Connect"
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginTop="16dp"

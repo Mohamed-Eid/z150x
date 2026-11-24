@@ -1,0 +1,299 @@
+
+package com.z150x.app
+
+import android.Manifest
+import android.content.Context
+import android.content.pm.PackageManager
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
+import android.os.Bundle
+import android.os.SystemClock
+
+/**
+ * Records a ride from the phone's GPS: live speed, distance, moving time, max speed, and the full
+ * track for the map. One recorder is shared process-wide via [TripLogger] so Android Auto projection,
+ * the built-in Map ([TripAutoLog]), and the [TripActivity] HUD never double-count the same ride.
+ *
+ * Auto-segmenting: if the bike sits still longer than [IDLE_SPLIT_MS], the current leg is finalised
+ * and saved and a fresh one begins — so parking mid-journey splits into sensible separate trips.
+ * A leg is only saved if it covers at least [MIN_SAVE_DISTANCE_M] over [MIN_SAVE_TIME_MS] of motion,
+ * filtering out GPS jitter while stopped.
+ */
+class TripRecorder(private val appContext: Context) : LocationListener {
+
+    data class Stats(
+        val recording: Boolean,
+        val speedKmh: Int,
+        val distanceMeters: Double,
+        val movingTimeMs: Long,
+        val maxSpeedMs: Float,
+        val hasFix: Boolean,
+        val accuracyM: Int,
+    )
+
+    @Volatile var onStats: ((Stats) -> Unit)? = null
+    @Volatile var onTripSaved: ((Trip) -> Unit)? = null
+
+    @Volatile var recording = false
+        private set
+
+    private val lm = appContext.getSystemService(Context.LOCATION_SERVICE) as? LocationManager
+
+    private val points = ArrayList<TrackPoint>()
+    private var distanceMeters = 0.0
+    private var movingTimeMs = 0L
+    private var maxSpeedMs = 0f
+    private var startTime = 0L
+    private var lastFix: Location? = null
+    private var lastFixAt = 0L
+    private var lastMovingAt = 0L
+    private var hasFix = false
+    private var lastAccuracy = 0
+    private var curSpeedKmh = 0
+
+    private fun hasPermission(): Boolean =
+        appContext.checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) ==
+            PackageManager.PERMISSION_GRANTED
+
+    fun gpsAvailable(): Boolean = lm?.isProviderEnabled(LocationManager.GPS_PROVIDER) == true
+
+    /** Begin (or resume) recording. Returns false if we lack permission or GPS is off. */
+    fun start(): Boolean {
+        if (recording) return true
+        if (!hasPermission() || lm == null || !gpsAvailable()) return false
+        resetLeg()
+        recording = true
+        try {
+            lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000L, 0f, this)
+        } catch (_: SecurityException) {
+            recording = false
+            return false
+        }
+        emit()
+        return true
+    }
+
+    /** Stop recording and save the current leg if it's meaningful. */
+    fun stopAndSave() {
+        if (!recording) return
+        try { lm?.removeUpdates(this) } catch (_: Exception) {}
+        recording = false
+        finalizeLeg(save = true)
+        curSpeedKmh = 0
+        hasFix = false
+        emit()
+    }
+
+    /** Stop and throw away the current leg (the HUD "Reset"). */
+    fun discard() {
+        try { lm?.removeUpdates(this) } catch (_: Exception) {}
+        recording = false
+        checkpointIo.execute { TripStore.clearCheckpoint(appContext) }
+        resetLeg()
+        curSpeedKmh = 0
+        hasFix = false
+        emit()
+    }
+
+    fun snapshot(): Stats = Stats(
+        recording = recording,
+        speedKmh = curSpeedKmh,
+        distanceMeters = distanceMeters,
+        movingTimeMs = movingTimeMs,
+        maxSpeedMs = maxSpeedMs,
+        hasFix = hasFix,
+        accuracyM = lastAccuracy,
+    )
+
+    override fun onLocationChanged(location: Location) {
+        if (!recording) { if (plausible(location)) lastSeen = location; return }
+        val now = SystemClock.elapsedRealtime()
+        val prev = lastFix
+        val d = prev?.distanceTo(location) ?: 0f
+        val dtMs = if (prev != null && lastFixAt > 0) now - lastFixAt else 0L
+        // v2.2: phantom trips ("Vuelta por Los Tempranales", 0.1–0.2 km in ~30 s, a place the rider
+        // never went) come from bad fixes — GPS cold start / indoors (accuracy of hundreds of metres)
+        // or a jump between two fixes — being summed as distance. Drop them before they count.
+        val jump = prev != null && dtMs > 0 && d / (dtMs / 1000f) > MAX_PLAUSIBLE_MS
+        if (!plausible(location) || jump) {
+            if (jump) LogBus.log("[trip] ignored GPS jump of ${d.toInt()} m in ${dtMs} ms")
+            // Keep the live speed readout alive (tunnels, poor sky) but don't add distance or points.
+            if (!jump && location.hasSpeed()) { curSpeedKmh = (location.speed * 3.6f).toInt(); emit() }
+            return
+        }
+        lastSeen = location
+
+        var speedMs = if (location.hasSpeed()) location.speed
+            else if (dtMs in 1..5000) d / (dtMs / 1000f) else 0f
+
+        val moving = speedMs >= MIN_MOVING_MS
+        var bridged = false
+        if (prev != null && moving && dtMs in 1..5000) {
+            distanceMeters += d
+            movingTimeMs += dtMs
+        } else if (prev != null && dtMs in 5001..MAX_GAP_BRIDGE_MS && d / (dtMs / 1000f) >= MIN_MOVING_MS) {
+            // Coming out of a tunnel (no fixes, or only poor ones we ignored): we kept moving the whole
+            // time, so count the gap as a straight line instead of losing it. Same leg, no split.
+            distanceMeters += d
+            movingTimeMs += dtMs
+            bridged = true
+            LogBus.log("[trip] bridged GPS gap: ${d.toInt()} m in ${dtMs / 1000} s (tunnel?)")
+        }
+        // A tunnel longer than IDLE_SPLIT_MS ending at a red light must not look like "parked".
+        if (moving || bridged) lastMovingAt = now
+        else if (lastMovingAt > 0 && now - lastMovingAt > IDLE_SPLIT_MS && distanceMeters > 0) {
+            // Parked long enough — bank this leg and start a fresh one, staying in recording mode.
+            finalizeLeg(save = true)
+            resetLeg()
+            speedMs = 0f
+        }
+
+        if (speedMs > maxSpeedMs) maxSpeedMs = speedMs
+        curSpeedKmh = (speedMs * 3.6f).coerceAtLeast(0f).toInt()
+        hasFix = true
+        lastAccuracy = if (location.hasAccuracy()) location.accuracy.toInt() else 0
+
+        points.add(TrackPoint(location.latitude, location.longitude, System.currentTimeMillis(), speedMs))
+        lastFix = location
+        lastFixAt = now
+        maybeCheckpoint(now)
+        emit()
+    }
+
+    private var lastCheckpointAt = 0L
+
+    /** Every ~30 s, copy the ride so far to disk (off the main thread) so a dead process can't lose it. */
+    private fun maybeCheckpoint(now: Long) {
+        if (!recording || points.size < 2 || now - lastCheckpointAt < CHECKPOINT_EVERY_MS) return
+        lastCheckpointAt = now
+        val trip = Trip(
+            id = startTime.toString(), start = startTime, end = System.currentTimeMillis(),
+            distanceMeters = distanceMeters, movingTimeMs = movingTimeMs, maxSpeedMs = maxSpeedMs,
+            points = ArrayList(points),
+        )
+        checkpointIo.execute { TripStore.writeCheckpoint(appContext, trip) }
+    }
+
+    override fun onProviderEnabled(provider: String) {}
+    override fun onProviderDisabled(provider: String) {}
+    @Deprecated("Deprecated in Java")
+    override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
+
+    private fun resetLeg() {
+        lastCheckpointAt = 0L
+        points.clear()
+        distanceMeters = 0.0
+        movingTimeMs = 0L
+        maxSpeedMs = 0f
+        startTime = System.currentTimeMillis()
+        lastFix = null
+        lastFixAt = 0L
+        lastMovingAt = 0L
+    }
+
+    private fun finalizeLeg(save: Boolean) {
+        if (!save || distanceMeters < MIN_SAVE_DISTANCE_M || movingTimeMs < MIN_SAVE_TIME_MS || points.size < 2) {
+            // Nothing to keep: the leg's checkpoint goes (same executor, so after any pending write).
+            checkpointIo.execute { TripStore.clearCheckpoint(appContext) }
+            return
+        }
+        val trip = Trip(
+            id = startTime.toString(),
+            start = startTime,
+            end = System.currentTimeMillis(),
+            distanceMeters = distanceMeters,
+            movingTimeMs = movingTimeMs,
+            maxSpeedMs = maxSpeedMs,
+            points = ArrayList(points),
+        )
+        // Writing an hour of track is ~180 KB of JSON: do it off the main thread (points already copied).
+        // On the checkpoint executor, so it runs after this leg's pending checkpoint writes and before
+        // the next leg's: the checkpoint is only removed once the trip file is really on disk.
+        val cb = onTripSaved
+        val main = android.os.Handler(android.os.Looper.getMainLooper())
+        checkpointIo.execute {
+            if (!TripStore.save(appContext, trip)) {
+                // TripStore logged why. Leave the whole ride as the checkpoint so the next start retries.
+                TripStore.writeCheckpoint(appContext, trip)
+                LogBus.log("[trip] ride ${trip.distanceText()} in ${trip.durationText()} NOT saved — kept as a checkpoint to retry at the next app start")
+                return@execute
+            }
+            TripStore.clearCheckpoint(appContext)
+            LogBus.log("[trip] saved ride ${trip.distanceText()} in ${trip.durationText()}")
+            // Name it ("Sants → Zona Franca"), check records, add the km to the bike.
+            try { TripNames.ensure(appContext, listOf(trip)) } catch (_: Exception) {}
+            try { Records.onTripSaved(appContext, trip) } catch (_: Exception) {}
+            try { Maintenance.onTripSaved(appContext, trip) } catch (_: Exception) {}
+            try { ParkingWidget.updateAll(appContext) } catch (_: Exception) {}
+            main.post { try { cb?.invoke(trip) } catch (_: Exception) {} }
+        }
+    }
+
+    private fun emit() {
+        try { onStats?.invoke(snapshot()) } catch (_: Exception) {}
+    }
+
+    companion object {
+        private const val CHECKPOINT_EVERY_MS = 30_000L
+        private val checkpointIo = java.util.concurrent.Executors.newSingleThreadExecutor { r ->
+            Thread(r, "trip-checkpoint").apply { isDaemon = true }
+        }
+
+        /**
+         * At app start: a ride the previous process was recording when it died is saved as a normal
+         * trip (named, records, maintenance km). Only meaningful rides; an already-saved id is skipped.
+         */
+        fun recoverAtStart(ctx: Context) {
+            val app = ctx.applicationContext
+            checkpointIo.execute {
+                try {
+                    val t = TripStore.readCheckpoint(app)
+                    if (t == null) {
+                        TripStore.clearCheckpoint(app) // nothing there, or a file that can't be read
+                        return@execute
+                    }
+                    if (t.distanceMeters < MIN_SAVE_DISTANCE_M || t.movingTimeMs < MIN_SAVE_TIME_MS || t.points.size < 2) {
+                        LogBus.log("[trip] left-over ride from the last session too short to keep (${t.distanceText()})")
+                        TripStore.clearCheckpoint(app)
+                        return@execute
+                    }
+                    if (TripStore.get(app, t.id) != null) {
+                        TripStore.clearCheckpoint(app)
+                        return@execute
+                    }
+                    // The checkpoint is only removed once the ride is safely in its own file.
+                    if (!TripStore.save(app, t)) {
+                        LogBus.log("[trip] left-over ride ${t.distanceText()} could NOT be saved — checkpoint kept for the next app start")
+                        return@execute
+                    }
+                    TripStore.clearCheckpoint(app)
+                    LogBus.log("[trip] RECOVERED ride ${t.distanceText()} in ${t.durationText()} — the app had closed mid-ride")
+                    try { TripNames.ensure(app, listOf(t)) } catch (_: Exception) {}
+                    try { Records.onTripSaved(app, t) } catch (_: Exception) {}
+                    try { Maintenance.onTripSaved(app, t) } catch (_: Exception) {}
+                } catch (e: Exception) {
+                    LogBus.log("[trip] recovery failed: ${e.message}")
+                }
+            }
+        }
+
+        /** Latest GPS fix seen, kept across legs/stops (where the bike was parked: [Parking]). */
+        @Volatile var lastSeen: Location? = null
+
+        private const val MIN_MOVING_MS = 0.8f          // ~2.9 km/h below which we treat as stopped
+        private const val IDLE_SPLIT_MS = 3 * 60_000L    // parked > 3 min → split into a new leg
+        private const val MIN_SAVE_DISTANCE_M = 300.0    // don't save trivial legs (was 100: GPS noise passed it)
+        private const val MIN_SAVE_TIME_MS = 30_000L
+        private const val MAX_ACCURACY_M = 35f           // worse fixes don't count toward a ride
+        private const val MAX_GAP_BRIDGE_MS = 10 * 60_000L // GPS gap still counted as riding (long tunnels)
+        private const val MAX_PLAUSIBLE_MS = 75f         // ~270 km/h between two fixes = a jump, not riding
+
+        /** A fix good enough to build a track from: real (not mocked) and reasonably accurate. */
+        private fun plausible(l: Location): Boolean {
+            if (android.os.Build.VERSION.SDK_INT >= 31 && l.isMock) return false
+            if (l.hasAccuracy() && l.accuracy > MAX_ACCURACY_M) return false
+            return true
+        }
+    }
+}

@@ -45,14 +45,14 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/map_mode_routes"
-            style="@style/Widget.OpenCfMoto.Segment"
+            style="@style/Widget.Z150X.Segment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/map_mode_routes" />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/map_mode_heat"
-            style="@style/Widget.OpenCfMoto.Segment"
+            style="@style/Widget.Z150X.Segment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -68,21 +68,21 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/map_period_month"
-            style="@style/Widget.OpenCfMoto.Segment"
+            style="@style/Widget.Z150X.Segment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/map_period_month" />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/map_period_year"
-            style="@style/Widget.OpenCfMoto.Segment"
+            style="@style/Widget.Z150X.Segment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/map_period_year" />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/map_period_all"
-            style="@style/Widget.OpenCfMoto.Segment"
+            style="@style/Widget.Z150X.Segment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

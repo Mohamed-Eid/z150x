@@ -64,7 +64,7 @@
     </queries>
 
     <application
-        android:name=".OpenCfMotoApp"
+        android:name=".Z150XApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -73,7 +73,7 @@
         android:localeConfig="@xml/locales_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.OpenCfMoto">
+        android:theme="@style/Theme.Z150X">
         <activity
             android:name=".SplashActivity"
             android:exported="true"

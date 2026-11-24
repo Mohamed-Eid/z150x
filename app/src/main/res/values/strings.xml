@@ -113,7 +113,7 @@
     <string name="setup_a_one_time_setup_so_android_auto_can_project_to_">Android Auto, the Z150X dash screen, buttons and battery options.</string>
     <string name="setup_get_started">Get started</string>
     <string name="setup_1_android_auto">1. Android Auto</string>
-    <string name="setup_android_auto_runs_maps_waze_opencfmoto_relays_it">Android Auto runs Maps/Waze. Z150X relays its screen to the bike.</string>
+    <string name="setup_android_auto_runs_maps_waze_z150x_relays_it">Android Auto runs Maps/Waze. Z150X relays its screen to the bike.</string>
     <string name="setup_open_android_auto">Open Android Auto</string>
     <string name="setup_install_android_auto">Install Android Auto</string>
     <string name="setup_2_permissions">2. Permissions</string>

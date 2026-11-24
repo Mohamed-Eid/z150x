@@ -11,7 +11,7 @@
     android:paddingEnd="24dp"
     android:paddingBottom="20dp">
 
-    <dev.zanderp.opencfmoto.RideProgressView
+    <com.z150x.app.RideProgressView
         android:id="@+id/ob_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

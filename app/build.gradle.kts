@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "dev.zanderp.opencfmoto"
+    namespace = "com.z150x.app"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1

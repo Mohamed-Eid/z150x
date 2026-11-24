@@ -102,7 +102,7 @@
                     android:textColor="@color/text_secondary"
                     android:textSize="13sp" />
 
-                <dev.zanderp.opencfmoto.ConnectRingView
+                <com.z150x.app.ConnectRingView
                     android:id="@+id/btn_connect"
                     android:layout_width="248dp"
                     android:layout_height="248dp"
@@ -148,9 +148,9 @@
                             android:textColor="@color/text_secondary"
                             android:textSize="13sp" />
                     </LinearLayout>
-                </dev.zanderp.opencfmoto.ConnectRingView>
+                </com.z150x.app.ConnectRingView>
 
-                <dev.zanderp.opencfmoto.RideStripView
+                <com.z150x.app.RideStripView
                     android:id="@+id/ride_strip"
                     android:layout_width="match_parent"
                     android:layout_height="66dp"

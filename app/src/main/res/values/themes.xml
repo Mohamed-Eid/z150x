@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Visual test "verde mate" (matte green + gold, Archivo). Was: a dark "cockpit" theme with a CFMoto-orange accent. Dark is intentional: this runs on a
          bike in daylight/handlebar context and mirrors a commercial head-unit look. -->
-    <style name="Base.Theme.OpenCfMoto" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Base.Theme.Z150X" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/brand_orange</item>
         <item name="colorOnPrimary">@color/on_brand</item>
         <item name="colorPrimaryContainer">@color/brand_orange_dark</item>
@@ -53,7 +53,7 @@
         <item name="android:windowLightStatusBar">false</item>
     </style>
 
-    <style name="Theme.OpenCfMoto" parent="Base.Theme.OpenCfMoto" />
+    <style name="Theme.Z150X" parent="Base.Theme.Z150X" />
 
     <style name="TextAppearance.Ocm.Display" parent="TextAppearance.Material3.DisplaySmall">
         <item name="android:fontFamily">@font/barlow_condensed_extrabold_italic</item>
@@ -105,7 +105,7 @@
     </style>
 
     <!-- Primary CTA: tall, rounded, confident. Height grows with font scale. -->
-    <style name="Widget.OpenCfMoto.Button.Connect" parent="Widget.Material3.Button">
+    <style name="Widget.Z150X.Button.Connect" parent="Widget.Material3.Button">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/btn_connect_text</item>
         <item name="android:textStyle">bold</item>
@@ -122,7 +122,7 @@
     </style>
 
     <!-- Secondary actions: tonal. Icon beside text (not above) so labels stay horizontal. -->
-    <style name="Widget.OpenCfMoto.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+    <style name="Widget.Z150X.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
         <item name="cornerRadius">14dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">@dimen/btn_tonal_min_height</item>
@@ -135,7 +135,7 @@
     </style>
 
     <!-- Icon-above tile (Scan / Map / Mirror). Uses auto-size so labels never go vertical. -->
-    <style name="Widget.OpenCfMoto.Button.Tile" parent="Widget.OpenCfMoto.Button.Tonal">
+    <style name="Widget.Z150X.Button.Tile" parent="Widget.Z150X.Button.Tonal">
         <item name="android:minHeight">@dimen/btn_tile_min_height</item>
         <item name="android:textSize">@dimen/btn_tile_text</item>
         <item name="android:insetTop">0dp</item>
@@ -151,7 +151,7 @@
     </style>
 
     <!-- Text/ghost actions for the log toolbar. -->
-    <style name="Widget.OpenCfMoto.Button.Text" parent="Widget.Material3.Button.TextButton">
+    <style name="Widget.Z150X.Button.Text" parent="Widget.Material3.Button.TextButton">
         <item name="android:textColor">@color/text_secondary</item>
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>
@@ -162,7 +162,7 @@
     </style>
 
     <!-- Segmented-control option (selection highlight is applied in code). -->
-    <style name="Widget.OpenCfMoto.Segment" parent="Widget.Material3.Button.TonalButton">
+    <style name="Widget.Z150X.Segment" parent="Widget.Material3.Button.TonalButton">
         <item name="cornerRadius">12dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/btn_segment_text</item>
@@ -178,7 +178,7 @@
     </style>
 
     <!-- Visual test: rounded pill shortcut (Controles / Viajes). -->
-    <style name="Widget.OpenCfMoto.Button.Pill" parent="Widget.Material3.Button.TonalButton">
+    <style name="Widget.Z150X.Button.Pill" parent="Widget.Material3.Button.TonalButton">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">56dp</item>
         <item name="cornerRadius">28dp</item>
@@ -216,7 +216,7 @@
         <item name="android:textSize">12sp</item>
     </style>
 
-    <style name="Card.OpenCfMoto" parent="Widget.Material3.CardView.Elevated">
+    <style name="Card.Z150X" parent="Widget.Material3.CardView.Elevated">
         <item name="cardCornerRadius">22dp</item>
         <item name="cardBackgroundColor">@color/surface</item>
         <item name="cardElevation">0dp</item>
@@ -225,7 +225,7 @@
         <item name="contentPadding">20dp</item>
     </style>
 
-    <style name="Card.OpenCfMoto.Log" parent="Card.OpenCfMoto">
+    <style name="Card.Z150X.Log" parent="Card.Z150X">
         <item name="cardCornerRadius">18dp</item>
         <item name="contentPadding">10dp</item>
     </style>

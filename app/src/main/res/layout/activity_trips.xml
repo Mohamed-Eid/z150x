@@ -35,14 +35,14 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/trips_all_map"
-            style="@style/Widget.OpenCfMoto.Button.Pill"
+            style="@style/Widget.Z150X.Button.Pill"
             android:layout_width="wrap_content"
             android:text="@string/all_rides_button" />
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/trips_import"
-        style="@style/Widget.OpenCfMoto.Button.Pill"
+        style="@style/Widget.Z150X.Button.Pill"
         android:layout_width="match_parent"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="8dp"
@@ -71,7 +71,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/trips_logging_enable"
-            style="@style/Widget.OpenCfMoto.Button.Pill"
+            style="@style/Widget.Z150X.Button.Pill"
             android:layout_width="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/trips_logging_enable" />

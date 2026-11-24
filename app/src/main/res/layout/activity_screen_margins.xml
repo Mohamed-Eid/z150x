@@ -148,7 +148,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_margins_reset"
-            style="@style/Widget.OpenCfMoto.Segment"
+            style="@style/Widget.Z150X.Segment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -156,7 +156,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_margins_done"
-            style="@style/Widget.OpenCfMoto.Segment"
+            style="@style/Widget.Z150X.Segment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

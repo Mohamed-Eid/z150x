@@ -1,0 +1,427 @@
+
+package com.z150x.app
+
+import android.content.Context
+import android.content.Intent
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.ColorMatrix
+import android.graphics.ColorMatrixColorFilter
+import android.graphics.Paint
+import android.graphics.Point
+import android.os.Bundle
+import android.view.View
+import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.button.MaterialButton
+import org.osmdroid.config.Configuration
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory
+import org.osmdroid.util.BoundingBox
+import org.osmdroid.util.GeoPoint
+import org.osmdroid.views.MapView
+import org.osmdroid.views.overlay.Marker
+import org.osmdroid.views.overlay.Overlay
+import org.osmdroid.views.overlay.Polyline
+import java.util.Calendar
+import java.util.Locale
+import kotlin.math.roundToInt
+import kotlin.math.abs
+import kotlin.math.max
+
+/**
+ * One saved ride's route (coloured by speed), or "everything I've ridden": every trip as routes or
+ * as a heat map, for this month / this year / ever. OpenStreetMap tiles via osmdroid (no API key).
+ */
+class TripMapActivity : AppCompatActivity() {
+
+    private lateinit var map: MapView
+    private val density get() = resources.displayMetrics.density
+
+    // "All" mode state.
+    private var allTrips: List<Trip> = emptyList()
+    private var heatMode = false
+    private var period = Period.ALL
+    private var framed = false
+    private var renderGen = 0
+    private var shownTrip: Trip? = null
+
+    enum class Period { MONTH, YEAR, ALL }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // osmdroid needs a non-default user agent or OSM tile servers reject the requests.
+        configureOsmdroid()
+
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_trip_map)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.trip_map_root)) { v, insets ->
+            val b = insets.getInsets(SafeInsets.BARS)
+            v.setPadding(b.left, b.top, b.right, b.bottom)
+            insets
+        }
+
+        map = findViewById(R.id.map)
+        map.setTileSource(TileSourceFactory.MAPNIK)
+        map.setMultiTouchControls(true)
+        map.setUseDataConnection(true)
+        // The attribution chip (layout) links to the licence page, as OpenStreetMap asks.
+        findViewById<View>(R.id.map_attribution).setOnClickListener {
+            try {
+                startActivity(Intent(Intent.ACTION_VIEW, "https://www.openstreetmap.org/copyright".toUri()))
+            } catch (_: Exception) {
+            }
+        }
+
+        if (intent.getBooleanExtra(EXTRA_ALL, false)) {
+            showAll()
+            return
+        }
+        val id = intent.getStringExtra(EXTRA_ID)
+        val trip = id?.let { TripStore.get(this, it) }
+        if (trip == null) {
+            Toast.makeText(this, R.string.code_toast_trip_not_found, Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+        shownTrip = trip
+
+        findViewById<TextView>(R.id.map_title).text = TripNames.title(this, trip)
+        findViewById<TextView>(R.id.map_stats).text =
+            getString(R.string.code_map_stats, trip.distanceText(), trip.durationText(), trip.avgKmh, trip.maxKmh) + "\n" +
+            getString(R.string.map_speed_legend)
+
+        renderRoute(trip)
+        compareWithUsual(trip)
+    }
+
+    /**
+     * v2.3 · 🆚 "Why did today take longer?": one line under the stats when this ride has at least three
+     * twins (same start and end); tap it for the breakdown.
+     */
+    private fun compareWithUsual(trip: Trip) {
+        Thread {
+            val r = try {
+                // Not every saved track: the cheap index (no GPS points) picks the rides whose length
+                // allows them to be this one's twins, and only those files are parsed.
+                val others = TripCompare.candidates(trip, TripStore.summaries(this)).mapNotNull { TripStore.get(this, it.id) }
+                TripCompare.compare(trip, others)
+            } catch (e: Exception) {
+                LogBus.log("[COMPARE] failed: $e"); null
+            } ?: return@Thread
+            runOnUiThread {
+                if (isFinishing || isDestroyed) return@runOnUiThread
+                val stats = findViewById<TextView>(R.id.map_stats)
+                stats.append("\n" + compareLine(r))
+                stats.setOnClickListener {
+                    com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
+                        .setTitle(R.string.cmp_title)
+                        .setMessage(compareDetail(r))
+                        .setPositiveButton(android.R.string.ok, null)
+                        .show()
+                }
+            }
+        }.start()
+    }
+
+    private fun mins(s: Int) = Math.round(kotlin.math.abs(s) / 60.0).toInt()
+
+    private fun factorText(f: TripCompare.Factor, slower: Boolean) = getString(when (f) {
+        TripCompare.Factor.STILL -> if (slower) R.string.cmp_why_still else R.string.cmp_why_still_less
+        TripCompare.Factor.PACE -> if (slower) R.string.cmp_why_pace else R.string.cmp_why_pace_more
+        TripCompare.Factor.ROUTE -> if (slower) R.string.cmp_why_route else R.string.cmp_why_route_less
+    })
+
+    private fun compareLine(r: TripCompare.Result): String {
+        if (!TripCompare.significant(r.diffS)) return getString(R.string.cmp_line_same, r.others)
+        val slower = r.diffS > 0
+        val base = getString(if (slower) R.string.cmp_line_slower else R.string.cmp_line_faster, mins(r.diffS))
+        return base + (r.main?.let { " · " + factorText(it, slower) } ?: "") + " ›"
+    }
+
+    private fun compareDetail(r: TripCompare.Result): String {
+        val t = r.today; val u = r.usual
+        val sb = StringBuilder()
+        sb.append(getString(R.string.cmp_detail_head, r.others, mins(t.totalS), mins(u.totalS)))
+        sb.append("\n\n").append(getString(R.string.cmp_detail_still, mins(t.stillS), t.stops, mins(u.stillS), u.stops))
+        sb.append("\n").append(getString(R.string.cmp_detail_pace, t.movingKmh.roundToInt(), u.movingKmh.roundToInt()))
+        sb.append("\n").append(getString(R.string.cmp_detail_km,
+            String.format(Locale.getDefault(), "%.1f", t.km), String.format(Locale.getDefault(), "%.1f", u.km)))
+        if (TripCompare.significant(r.diffS)) {
+            val slower = r.diffS > 0
+            sb.append("\n\n").append(r.main?.let { getString(R.string.cmp_detail_main, factorText(it, slower)) }
+                ?: getString(R.string.cmp_detail_mixed))
+        }
+        return sb.toString()
+    }
+
+    /**
+     * Tile cache (90 days) with an identifying User-Agent (OSM tile policy). It lives in `cacheDir`:
+     * map tiles can be downloaded again, so they must not be part of the phone's backup or count as
+     * app data, and Android may reclaim the space when storage runs low.
+     */
+    private fun configureOsmdroid() {
+        val app = applicationContext
+        val base = java.io.File(app.cacheDir, "osmdroid")
+        val cache = java.io.File(base, "tiles")
+        cache.mkdirs()
+        // Earlier versions kept the cache (up to 512 MB) in filesDir: give that space back, once.
+        if (!oldTileCacheChecked) {
+            oldTileCacheChecked = true
+            Thread({
+                try {
+                    val old = java.io.File(app.filesDir, "osmdroid")
+                    if (old.exists()) LogBus.log("[map] old tile cache in files/ removed: ${old.deleteRecursively()}")
+                } catch (_: Exception) {
+                }
+            }, "old-tile-cache").start()
+        }
+        val cfg = Configuration.getInstance()
+        cfg.userAgentValue = AppHttp.USER_AGENT
+        cfg.osmdroidBasePath = base
+        cfg.osmdroidTileCache = cache
+        cfg.expirationOverrideDuration = 90L * 24 * 60 * 60 * 1000
+        cfg.tileDownloadThreads = 2
+        cfg.tileFileSystemCacheMaxBytes = 512L * 1024 * 1024
+    }
+
+    // ---------------------------------------------------------------- single trip
+
+    /** The route coloured by speed (blue = slow → red = fast, relative to this trip's top speed). */
+    private fun renderRoute(trip: Trip) {
+        val pts = trip.points
+        if (pts.isEmpty()) {
+            map.controller.setZoom(4.0)
+            return
+        }
+        val geo = pts.map { GeoPoint(it.lat, it.lon) }
+        map.overlays.add(casing(geo))
+        val top = max(trip.maxSpeedMs, 1f)
+        // Group consecutive points into runs of the same colour bucket (few overlays, smooth look).
+        var run = ArrayList<GeoPoint>()
+        var bucket = -1
+        fun flush() {
+            if (run.size >= 2) map.overlays.add(line(run, HeatGrid.color(bucket / 9f), LINE_DP))
+        }
+        for (i in pts.indices) {
+            val b = ((pts[i].speedMs / top).coerceIn(0f, 1f) * 9).toInt()
+            if (b != bucket && run.isNotEmpty()) {
+                run.add(geo[i])
+                flush()
+                run = arrayListOf(geo[i])
+            } else {
+                run.add(geo[i])
+            }
+            bucket = b
+        }
+        flush()
+
+        addMarker(geo.first(), getString(R.string.code_map_start), Color.GREEN)
+        if (geo.size > 1) addMarker(geo.last(), getString(R.string.code_map_end), Color.RED)
+        frame(geo, 1.4f)
+    }
+
+    // ---------------------------------------------------------------- everything I've ridden
+
+    private fun showAll() {
+        findViewById<TextView>(R.id.map_title).setText(R.string.all_rides_title)
+        findViewById<TextView>(R.id.map_stats).setText(R.string.trips_loading_all)
+        findViewById<View>(R.id.map_controls).visibility = View.VISIBLE
+        dimBaseMap()
+        mapOf<Int, () -> Unit>(
+            R.id.map_mode_routes to { heatMode = false },
+            R.id.map_mode_heat to { heatMode = true },
+            R.id.map_period_month to { period = Period.MONTH; framed = false },
+            R.id.map_period_year to { period = Period.YEAR; framed = false },
+            R.id.map_period_all to { period = Period.ALL; framed = false },
+        ).forEach { (id, action) ->
+            findViewById<MaterialButton>(id).setOnClickListener {
+                action()
+                renderAll()
+            }
+        }
+        Thread({
+            val trips = try { TripStore.list(this) } catch (_: Exception) { emptyList() }
+            runOnUiThread {
+                if (isFinishing || isDestroyed) return@runOnUiThread
+                allTrips = trips
+                renderAll()
+            }
+        }, "all-rides").start()
+    }
+
+    private fun filtered(): List<Trip> {
+        val cal = Calendar.getInstance()
+        cal.set(Calendar.HOUR_OF_DAY, 0); cal.set(Calendar.MINUTE, 0)
+        cal.set(Calendar.SECOND, 0); cal.set(Calendar.MILLISECOND, 0)
+        val since = when (period) {
+            Period.ALL -> 0L
+            Period.YEAR -> cal.apply { set(Calendar.DAY_OF_YEAR, 1) }.timeInMillis
+            Period.MONTH -> cal.apply { set(Calendar.DAY_OF_MONTH, 1) }.timeInMillis
+        }
+        return allTrips.filter { it.start >= since && it.points.size >= 2 }
+    }
+
+    private fun renderAll() {
+        highlight(R.id.map_mode_routes, !heatMode)
+        highlight(R.id.map_mode_heat, heatMode)
+        highlight(R.id.map_period_month, period == Period.MONTH)
+        highlight(R.id.map_period_year, period == Period.YEAR)
+        highlight(R.id.map_period_all, period == Period.ALL)
+
+        val trips = filtered()
+        val km = trips.sumOf { it.distanceKm }
+        findViewById<TextView>(R.id.map_stats).text =
+            getString(R.string.all_rides_stats, trips.size, String.format(Locale.getDefault(), "%.0f", km))
+
+        map.overlays.clear()
+        val all = ArrayList<GeoPoint>()
+        if (heatMode) {
+            // Building the grid walks every GPS point: off the UI thread.
+            val gen = ++renderGen
+            Thread({
+                val grid = HeatGrid.build(trips)
+                runOnUiThread {
+                    if (isFinishing || isDestroyed || gen != renderGen) return@runOnUiThread
+                    map.overlays.add(HeatOverlay(grid))
+                    map.invalidate()
+                    val pts = grid.cells.map { GeoPoint(it.lat, it.lon) }
+                    if (pts.isEmpty()) Toast.makeText(this, R.string.all_rides_none, Toast.LENGTH_SHORT).show()
+                    else if (!framed) { framed = true; frame(pts, 1.2f) }
+                }
+            }, "heat-grid").start()
+            return
+        } else {
+            renderGen++
+            val gold = ContextCompat.getColor(this, R.color.brand_orange)
+            val lines = trips.map { t ->
+                val step = maxOf(1, t.points.size / 500)
+                t.points.filterIndexed { i, _ -> i % step == 0 || i == t.points.lastIndex }
+                    .map { GeoPoint(it.lat, it.lon) }
+            }
+            lines.forEach { all.addAll(it) }
+            lines.forEach { map.overlays.add(casing(it)) } // all casings first so lines sit on top
+            lines.forEach { map.overlays.add(line(it, gold, LINE_DP)) }
+        }
+        map.invalidate()
+        if (all.isEmpty()) {
+            Toast.makeText(this, R.string.all_rides_none, Toast.LENGTH_SHORT).show()
+        } else if (!framed) {
+            framed = true
+            frame(all, 1.2f)
+        }
+    }
+
+    private fun highlight(id: Int, on: Boolean) {
+        findViewById<MaterialButton>(id).alpha = if (on) 1f else 0.5f
+    }
+
+    /** Desaturate and darken the OSM tiles a bit so our routes / heat are what stands out. */
+    private fun dimBaseMap() {
+        val m = ColorMatrix().apply { setSaturation(0.25f) }
+        m.postConcat(
+            ColorMatrix(
+                floatArrayOf(
+                    0.82f, 0f, 0f, 0f, 0f,
+                    0f, 0.82f, 0f, 0f, 0f,
+                    0f, 0f, 0.82f, 0f, 0f,
+                    0f, 0f, 0f, 1f, 0f,
+                )
+            )
+        )
+        map.overlayManager.tilesOverlay.setColorFilter(ColorMatrixColorFilter(m))
+    }
+
+    /** Heat cells: a soft halo plus a solid core, blue → red, hottest on top. */
+    private inner class HeatOverlay(private val grid: HeatGrid) : Overlay() {
+        private val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.FILL }
+        private val p = Point()
+        private val q = Point()
+
+        override fun draw(c: Canvas, mapView: MapView, shadow: Boolean) {
+            if (shadow || grid.cells.isEmpty()) return
+            val proj = mapView.projection
+            val dLat = grid.sizeDeg.first
+            val first = grid.cells.first()
+            proj.toPixels(GeoPoint(first.lat, first.lon), p)
+            proj.toPixels(GeoPoint(first.lat + dLat, first.lon), q)
+            val cellPx = abs(p.y - q.y).toFloat()
+            val r = max(cellPx * 0.75f, 4f * density)
+            val w = mapView.width
+            val h = mapView.height
+            for (cell in grid.cells) {
+                proj.toPixels(GeoPoint(cell.lat, cell.lon), p)
+                if (p.x < -r * 2 || p.y < -r * 2 || p.x > w + r * 2 || p.y > h + r * 2) continue
+                paint.color = HeatGrid.color(cell.heat, 70)
+                c.drawCircle(p.x.toFloat(), p.y.toFloat(), r * 1.9f, paint)
+                paint.color = HeatGrid.color(cell.heat, 210)
+                c.drawCircle(p.x.toFloat(), p.y.toFloat(), r, paint)
+            }
+        }
+    }
+
+    // ---------------------------------------------------------------- helpers
+
+    private fun casing(points: List<GeoPoint>) = line(points, Color.parseColor("#14201A"), LINE_DP + 3.5f)
+
+    private fun line(points: List<GeoPoint>, color: Int, widthDp: Float) = Polyline(map).apply {
+        setPoints(points)
+        outlinePaint.color = color
+        outlinePaint.strokeWidth = widthDp * density
+        outlinePaint.strokeCap = Paint.Cap.ROUND
+        outlinePaint.strokeJoin = Paint.Join.ROUND
+        infoWindow = null
+    }
+
+    private fun frame(points: List<GeoPoint>, scale: Float) {
+        val bbox = BoundingBox.fromGeoPoints(points)
+        map.post {
+            try {
+                map.zoomToBoundingBox(bbox.increaseByScale(scale), false, (24 * density).toInt())
+            } catch (_: Exception) {
+                map.controller.setZoom(15.0)
+                map.controller.setCenter(points.first())
+            }
+        }
+    }
+
+    private fun addMarker(point: GeoPoint, label: String, tint: Int) {
+        val marker = Marker(map).apply {
+            position = point
+            setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+            title = label
+            icon?.setTint(tint)
+        }
+        map.overlays.add(marker)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (this::map.isInitialized) map.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if (this::map.isInitialized) map.onPause()
+    }
+
+    companion object {
+        private const val EXTRA_ID = "trip_id"
+        private const val EXTRA_ALL = "all_trips"
+        private const val LINE_DP = 4f
+        @Volatile private var oldTileCacheChecked = false
+
+        fun start(ctx: Context, id: String) {
+            ctx.startActivity(Intent(ctx, TripMapActivity::class.java).putExtra(EXTRA_ID, id))
+        }
+
+        fun startAll(ctx: Context) {
+            ctx.startActivity(Intent(ctx, TripMapActivity::class.java).putExtra(EXTRA_ALL, true))
+        }
+    }
+}
