@@ -1,8 +1,8 @@
 # Z150X on Google Play — checklist
 
-Status on 24 November 2026: the code side is ready (a signed bundle builds, lint is clean, the
-permissions are down to what the app uses). What is left is done in the Play Console and on GitHub,
-by the account owner.
+Status on 24 November 2026: the code side is ready (the bundle builds, lint has no errors, the
+permissions are down to what the app uses) and the source repository is public. What is left is the
+release key (see below) and the Play Console work, by the account owner.
 
 ## Build the bundle
 
@@ -13,6 +13,11 @@ by the account owner.
 Output: `app/build/outputs/bundle/playRelease/app-play-release.aab`, signed with the Z150X key from
 `keystore.properties`. `versionCode` comes from the version (1.7 → 10700); raise the version for
 every upload.
+
+**The key must be in place first.** `keystore.properties` and `keystore/z150x-release.jks` are
+git-ignored, so a fresh clone has neither and the bundle comes out **unsigned**; Play refuses an
+unsigned bundle. Copy both files into the checkout before building, and confirm with
+`jarsigner -verify app/build/outputs/bundle/playRelease/app-play-release.aab`.
 
 Checked on the 1.7 bundle:
 
@@ -40,11 +45,11 @@ To switch, delete the `applicationId = "com.z150x.app.play"` line in `app/build.
 
 ## Before submitting
 
-1. **Make the source and the privacy policy reachable.** The app's About screen links to
+1. **Source and privacy policy reachable — done.** The app's About screen links to
    `github.com/Mohamed-Eid/z150x` (licence and source, required by the AGPL) and to `PRIVACY.md` in
-   it. On 24 Nov 2026 that repository answers 404 to the public, so it is private. Make it public, or
-   host both somewhere public and change `URL_SOURCE` / `URL_PRIVACY` in `AboutActivity.kt`. Play
-   also needs the privacy policy URL in the store listing; it must open without signing in.
+   it. The repository was made public on 24 Nov 2026 and both links open without signing in. Use
+   `https://github.com/Mohamed-Eid/z150x/blob/main/PRIVACY.md` as the privacy policy URL in the
+   store listing. If the repository ever goes private again, both links break.
 2. **Play Console developer account** (25 USD, identity check). A personal account opened after
    November 2023 must run a **closed test with at least 12 testers for 14 days** before it can apply
    for production.
@@ -62,6 +67,12 @@ To switch, delete the `applicationId = "com.z150x.app.play"` line in `app/build.
   Android Auto's developer option "Start head unit server". Other head-unit apps have been on Google
   Play for years, but Google has not approved this, and it can reject or later remove the app for it.
   Keep the sideloaded APK as a second channel.
+- **The TLS check on that link.** Google Play blocks apps whose `X509TrustManager` accepts every
+  certificate. The app's one (`aa/AaPeerTrustManager.kt`) now refuses a peer with no certificate or
+  with the head unit's own, and lint's `TrustAllX509TrustManager` check passes. It still cannot
+  validate Android Auto's chain (Google's Automotive Link root is not public), so identity rests on
+  the key pinned on first use (`aa/AaPeerTrust.kt`). Whether Play's own scanner accepts this shows
+  only in the pre-launch report of the first internal-test upload: read it before going further.
 - **Names.** "Zontes" and "Android Auto" are other companies' trademarks. Do not put either in the
   app *title* or the icon. The app's own name, Z150X, is also the maker's model name: if the maker
   objects, the name and the store title have to change. In the description, describe compatibility ("for the Zontes Z150X dash",
@@ -145,14 +156,18 @@ with other users, no violence, no purchases → the lowest rating.
 
 | Question | Answer |
 |---|---|
-| Does the app collect or share user data? | Yes (approximate location only) |
+| Does the app collect or share user data? | Yes (location only) |
 | Is data encrypted in transit? | Yes (HTTPS) |
 | Can users ask for data to be deleted? | Nothing is kept by the developer; uninstalling removes everything |
-| Location → Approximate location | Collected: yes. Shared: yes (OpenStreetMap Nominatim for ride names; Open-Meteo for the rain alert). Processed ephemerally: yes. Required: no (both can be switched off). Purpose: app functionality |
-| Location → Precise location | Not collected (it stays on the phone: ride log, parked-bike spot) |
+| Location → Precise location | Collected: yes. Shared: yes (OpenStreetMap Nominatim gets a ride's start and end rounded to about 100 m, for ride names; Open-Meteo gets the position rounded to about 1 km, for the rain alert). Processed ephemerally: yes. Required: no (both can be switched off). Purpose: app functionality |
+| Location → Approximate location | Not collected separately (nothing coarser than the two requests above is sent) |
 | Audio (microphone) | Not collected (passed to Android Auto on the phone; never stored or sent by the app) |
 | Photos | Not collected (the parked-bike photo stays on the phone) |
 | App activity, diagnostics, device IDs, contacts, messages, files, financial, health | Not collected |
+
+Why "precise": Google counts a position as approximate only when it is no finer than an area of
+3 km². Both requests are finer than that (about 100 m, and a square of about 1 km), so they go under
+Precise location even though they are rounded. The full GPS track of a ride never leaves the phone.
 
 The support log leaves the phone only when the rider shares it by hand, so it is not "collected".
 
