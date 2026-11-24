@@ -11,7 +11,7 @@ import android.view.KeyEvent
  * (D-pad / BUTTON_A) captured from a focused activity.
  */
 object RemotePad {
-    private const val PREFS = "opencfmoto_remote_pad"
+    private const val PREFS = "z150x_remote_pad"
     private const val KEY_ON = "remote_pad_on"
     private const val KEY_MAP = "remote_pad_map"
 

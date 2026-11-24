@@ -1,4 +1,4 @@
-// OpenCfMoto glue (uses AGPLv3 code ported from headunit-revived). Orchestrates the loopback
+// Z150X glue (uses AGPLv3 code ported from headunit-revived). Orchestrates the loopback
 // "self-mode" Android Auto Projection receiver:
 //   1. Listen on TCP 127.0.0.1:5288 (+ NSD _aawireless._tcp).
 //   2. Launch Google Android Auto's WirelessStartupActivity pointed at 127.0.0.1:5288 (no VPN).

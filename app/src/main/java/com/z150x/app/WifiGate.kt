@@ -19,7 +19,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
  * notification only as a fallback with no Activity).
  */
 object WifiGate {
-    private const val CHANNEL_ID = "opencfmoto_wifi"
+    private const val CHANNEL_ID = "z150x_wifi"
     private const val NOTIF_ID = 4
 
     /** Avoid stacking multiple Wi‑Fi dialogs / re-notifying while it stays off. */

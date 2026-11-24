@@ -54,7 +54,7 @@ data class SpeedVolumeCurve(val startKmh: Int, val kmhPerStep: Int, val maxSteps
 }
 
 object SpeedVolumePrefs {
-    private const val PREFS = "opencfmoto_speed_volume"
+    private const val PREFS = "z150x_speed_volume"
     private const val KEY_LEVEL = "level"
     private const val KEY_CUSTOM = "custom_enabled"
     private const val KEY_START = "custom_start_kmh"

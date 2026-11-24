@@ -10,7 +10,7 @@ import android.content.Context
  * panel at 1:1 (LearnedPanels-style), not just flip portrait/landscape.
  */
 object DashMemory {
-    private const val PREFS = "opencfmoto_bike"
+    private const val PREFS = "z150x_bike"
     private const val KEY_PREFIX = "dash_geo_"
     private const val KEY_LAST_TOUCH = "last_dash_touch"
 

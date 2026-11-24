@@ -22,7 +22,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
  */
 object PhoneHotspotAssist {
 
-    private const val PREFS = "opencfmoto_phone_hotspot"
+    private const val PREFS = "z150x_phone_hotspot"
     private const val KEY_SSID = "dash_hotspot_ssid"
     private const val KEY_PWD = "dash_hotspot_pwd"
 

@@ -919,7 +919,7 @@ class MediaButtonBridge(private val context: Context, private val log: (String) 
         private const val KEEP_ALIVE_MS = 4_000L
         /** No ▲/▼ while streaming → mark rocker absent and stop pinning volume. */
         private const val ABSENT_VOLUME_PROBE_MS = 90_000L
-        private const val MEDIA_CHANNEL = "opencfmoto_media"
+        private const val MEDIA_CHANNEL = "z150x_media"
         private const val MEDIA_NOTIF_ID = 3   // must not collide with AndroidAutoService's NOTIF_ID (2)
 
         /** The live bridge (when Android Auto is running), so the settings toggle can reach it. */

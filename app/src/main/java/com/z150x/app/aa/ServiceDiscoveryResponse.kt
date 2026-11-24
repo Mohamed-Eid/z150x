@@ -125,10 +125,10 @@ class ServiceDiscoveryResponse
             }.build())
 
             return Control.ServiceDiscoveryResponse.newBuilder().apply {
-                make = "OpenCfMoto"
+                make = "Z150X"
                 model = "MotoPlay"
                 year = "2024"
-                vehicleId = "opencfmoto"
+                vehicleId = "z150x"
                 headUnitModel = "CFDL16-6GUV"
                 headUnitMake = "CFMoto"
                 headUnitSoftwareBuild = "1"
@@ -136,14 +136,14 @@ class ServiceDiscoveryResponse
                 driverPosition = Control.DriverPosition.DRIVER_POSITION_LEFT
                 canPlayNativeMediaDuringVr = false
                 hideProjectedClock = false
-                setDisplayName("OpenCfMoto")
+                setDisplayName("Z150X")
                 setHeadunitInfo(Common.HeadUnitInfo.newBuilder().apply {
                     setHeadUnitMake("CFMoto")
                     setHeadUnitModel("CFDL16-6GUV")
-                    setMake("OpenCfMoto")
+                    setMake("Z150X")
                     setModel("MotoPlay")
                     setYear("2024")
-                    setVehicleId("opencfmoto")
+                    setVehicleId("z150x")
                     setHeadUnitSoftwareBuild("1")
                     setHeadUnitSoftwareVersion("0.1.0")
                 }.build())

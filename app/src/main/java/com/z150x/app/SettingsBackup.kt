@@ -17,7 +17,7 @@ import java.util.Locale
  * Import applies to the **currently selected** garage bike (via [BikeScope]).
  */
 object SettingsBackup {
-    const val FORMAT = "opencfmoto.settings"
+    const val FORMAT = "z150x.settings"
     const val VERSION = 1
 
     data class Result(val ok: Boolean, val message: String)

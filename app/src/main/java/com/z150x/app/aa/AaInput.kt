@@ -1,4 +1,4 @@
-// OpenCfMoto (uses AGPLv3 code/protocol ported from headunit-revived). Injects touch input into the
+// Z150X (uses AGPLv3 code/protocol ported from headunit-revived). Injects touch input into the
 // Android Auto session: the CFMoto dash is a touchscreen and reports touches over PXC (see
 // EasyConnProber cmdType 32); this forwards them to Gearhead over the AAP INPUT channel so Maps/Waze
 // can be driven from the bike.

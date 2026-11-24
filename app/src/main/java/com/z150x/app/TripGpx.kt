@@ -50,8 +50,7 @@ object TripGpx {
     // ── v2.3: import a ride from a GPX file (22 Oct 2026: a ride lost when the app died, rebuilt from
     // Google Maps Timeline). Track points need a <time>; <speed> (m/s, in <extensions> or GPX 1.0) and a
     // <distanceMeters> anywhere outside the points (e.g. the distance Google measured) are optional.
-    // The `creator` attribute is never looked at, so files exported under the old name
-    // (creator="OpenCfMoto", opencfmoto_trip_*.gpx) import like any other.
+    // The `creator` attribute is never looked at, so a file written by any app imports the same way.
 
     class Imported(val trip: Trip, val pointCount: Int)
 

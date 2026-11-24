@@ -1,6 +1,5 @@
 package com.z150x.app
 
-import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -31,7 +30,5 @@ class TripGpxTest {
         assertTrue(xml.contains("creator=\"Z150X\""))
         assertTrue(xml.contains("<name>Z150X "))
         assertTrue(TripGpx.suggestedFileName(trip).startsWith("z150x_trip_"))
-        assertFalse(xml.contains("OpenCfMoto", ignoreCase = true))
-        assertFalse(TripGpx.suggestedFileName(trip).contains("opencfmoto", ignoreCase = true))
     }
 }

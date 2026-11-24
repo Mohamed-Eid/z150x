@@ -18,7 +18,7 @@ enum class MapTheme(val label: String, @StringRes val labelRes: Int) {
 }
 
 object NightPrefs {
-    private const val PREFS = "opencfmoto_bike"
+    private const val PREFS = "z150x_bike"
     private const val KEY = "map_theme"
 
     private fun prefs(ctx: Context) =

@@ -9,7 +9,7 @@ class SettingsBackupTest {
 
     @Test
     fun formatAndVersionAreStable() {
-        assertEquals("opencfmoto.settings", SettingsBackup.FORMAT)
+        assertEquals("z150x.settings", SettingsBackup.FORMAT)
         assertEquals(1, SettingsBackup.VERSION)
     }
 

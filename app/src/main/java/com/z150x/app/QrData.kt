@@ -302,7 +302,7 @@ data class QrData(
             val name = displayName?.trim()?.takeIf { it.isNotEmpty() } ?: s
             val raw = Uri.Builder()
                 .scheme("http")
-                .authority("manual.opencfmoto.local")
+                .authority("manual.z150x.local")
                 .path("/")
                 .appendQueryParameter("ssid", s)
                 .appendQueryParameter("pwd", p)

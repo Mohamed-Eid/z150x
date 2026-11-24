@@ -742,7 +742,7 @@ class SetupActivity : AppCompatActivity() {
 
     companion object {
         private const val REQ_PERMS = 42
-        private const val PREFS = "opencfmoto_bike"
+        private const val PREFS = "z150x_bike"
         private const val KEY_SEEN = "setup_seen"
 
         fun hasSeen(ctx: android.content.Context): Boolean =

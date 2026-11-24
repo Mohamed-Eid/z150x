@@ -23,7 +23,7 @@ data class SavedBike(val raw: String, val name: String, val photoPath: String? =
  * versions) is migrated into the list on first read.
  */
 object BikeMemory {
-    private const val PREFS = "opencfmoto_bike"
+    private const val PREFS = "z150x_bike"
     private const val KEY_LIST = "bikes_json"
     private const val KEY_SELECTED = "selected_raw"
 

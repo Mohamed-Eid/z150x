@@ -30,7 +30,7 @@ enum class LongPressDelay(val ms: Long, val label: String, @StringRes val labelR
  * Handlebar gesture timing. Global (not per-bike) — it's about how the rider taps, not the dash.
  */
 object ButtonTimingPrefs {
-    private const val PREFS = "opencfmoto_btn_timing"
+    private const val PREFS = "z150x_btn_timing"
     private const val KEY_DOUBLE = "double_tap_ms"
     private const val KEY_LONG = "long_press_ms"
     private const val KEY_HOLDS = "holds_enabled"

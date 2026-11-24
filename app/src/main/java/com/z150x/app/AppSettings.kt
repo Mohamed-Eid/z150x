@@ -17,7 +17,7 @@ import android.content.Context
  *    with [forceNonTouch].
  */
 object AppSettings {
-    private const val PREFS = "opencfmoto_bike"
+    private const val PREFS = "z150x_bike"
     private const val KEY_AUTO_CONNECT = "auto_connect"
     private const val KEY_AUTO_RECOVERY = "auto_recovery"
     private const val KEY_LOG_TRIPS = "log_trips"

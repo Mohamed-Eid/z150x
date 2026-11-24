@@ -720,7 +720,7 @@ class AndroidAutoService : Service() {
 
     companion object {
         private const val NOTIF_ID = 2
-        private const val CHANNEL_ID = "opencfmoto_androidauto"
+        private const val CHANNEL_ID = "z150x_androidauto"
 
         // Watchdog cadence / thresholds.
         private const val WATCHDOG_TICK_MS = 5_000L

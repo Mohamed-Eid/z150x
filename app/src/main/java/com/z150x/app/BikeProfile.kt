@@ -304,14 +304,14 @@ private fun basePhoneClientInfo(huid: String?, phoneUuid: String, supportFunctio
         put("token", 0)
         put("pubkey", RsaKeys.publicKeyBase64)
         put("encryptedHUID", huid?.let { RsaKeys.signHuid(it) } ?: "")
-        put("bluetoothName", "OpenCfMoto")
+        put("bluetoothName", "Z150X")
         put("supportH264IFrame", true)
         put("supportFunction", supportFunction)
         // Do NOT advertise supportSyncCorrectTime. Claiming it made some firmwares apply our
         // 0x10601 aggressively (Zontes/Voge → 00:00) even when the cluster clock was already fine.
         // We still body-ack every inbound 0x10600 (see HuTimeSync) so Morini/QJ never see empty→1970.
         put("supportSyncCorrectTime", false)
-        put("appVersionFingerPrint", "opencfmoto-poc")
+        put("appVersionFingerPrint", "z150x")
     }
 
 /**

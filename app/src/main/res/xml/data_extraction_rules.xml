@@ -16,8 +16,8 @@
      Keep in sync with backup_rules.xml. -->
 <data-extraction-rules>
     <cloud-backup>
-        <exclude domain="sharedpref" path="opencfmoto_bike.xml" />
-        <exclude domain="sharedpref" path="opencfmoto_phone_hotspot.xml" />
+        <exclude domain="sharedpref" path="z150x_bike.xml" />
+        <exclude domain="sharedpref" path="z150x_phone_hotspot.xml" />
         <exclude domain="sharedpref" path="crash_detector.xml" />
         <exclude domain="sharedpref" path="arrival_notice.xml" />
         <exclude domain="sharedpref" path="companion.xml" />
@@ -31,8 +31,8 @@
         <exclude domain="file" path="osmdroid/" />
     </cloud-backup>
     <device-transfer>
-        <exclude domain="sharedpref" path="opencfmoto_bike.xml" />
-        <exclude domain="sharedpref" path="opencfmoto_phone_hotspot.xml" />
+        <exclude domain="sharedpref" path="z150x_bike.xml" />
+        <exclude domain="sharedpref" path="z150x_phone_hotspot.xml" />
         <exclude domain="sharedpref" path="crash_detector.xml" />
         <exclude domain="sharedpref" path="arrival_notice.xml" />
         <exclude domain="sharedpref" path="companion.xml" />

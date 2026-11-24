@@ -42,7 +42,7 @@ enum class ProfileOverride(val id: String, val shortLabel: String, val detail: S
 }
 
 object ProfilePrefs {
-    private const val PREFS = "opencfmoto_bike"
+    private const val PREFS = "z150x_bike"
     private const val KEY = "profile_override"
 
     private fun prefs(ctx: Context) =

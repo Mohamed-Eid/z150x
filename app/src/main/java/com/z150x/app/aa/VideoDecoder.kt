@@ -1,6 +1,6 @@
 // Adapted from headunit-revived (AGPLv3): decoder/VideoDecoder.kt
 // Trimmed to the H.264 (video/avc) hardware/software MediaCodec path only. HUR's H.265/HEVC,
-// bundled FFmpeg, software-YUV GL sink, and Settings dependencies are removed — OpenCfMoto
+// bundled FFmpeg, software-YUV GL sink, and Settings dependencies are removed — Z150X
 // requests only H.264 in service discovery and renders straight to a caller-supplied Surface
 // (the encoder input surface of VideoPipeline).
 package com.z150x.app.aa

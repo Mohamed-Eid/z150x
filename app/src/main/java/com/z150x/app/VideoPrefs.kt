@@ -94,7 +94,7 @@ enum class MatchAspectMode(val label: String) {
  * has never been customized — the previous single, global value is used as the default.
  */
 object VideoPrefs {
-    private const val PREFS = "opencfmoto_bike"
+    private const val PREFS = "z150x_bike"
     private const val KEY_QUALITY = "video_quality"
     private const val KEY_FIT = "screen_fit"
     private const val KEY_POWER = "power_mode"
