@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="extras_section">إضافات المشوار</string>
+    <string name="extras_parking">أنا ركنت فين؟</string>
+    <string name="extras_parking_desc">بيفتكر انت سبت الموتوسيكل فين لما تفصل عن الشاشة. بيظهر في الشاشة الرئيسية وويدجت الهوم سكرين والساعة، مع اتجاهات المشي.</string>
+    <string name="extras_rain">تنبيه المطر</string>
+    <string name="extras_rain_desc">لما توصّل، بيشوف توقعات الطقس لـ 3 ساعات الجاية حواليك (Open-Meteo، موقع تقريبي بس) وينبهك على الموبايل والساعة لو المطر متوقع.</string>
+    <string name="rain_channel">تنبيهات المشوار</string>
+    <string name="rain_title">🌧️ مطر متوقع</string>
+    <string name="rain_title_heavy">🌧️ مطر جامد متوقع</string>
+    <string name="rain_now">بتمطر أو قربت تمطر عندك.</string>
+    <string name="rain_in_minutes">مطر متوقع كمان حوالي %1$d دقيقة عندك.</string>
+    <string name="rain_source">الطقس: Open-Meteo.com</string>
+    <string name="parked_pill">🅿️ موتوسيكلك · %1$s</string>
+    <string name="parked_pill_dist">🅿️ موتوسيكلك · %1$s · %2$s</string>
+    <string name="parked_cleared">مكان الركنة اتمسح</string>
+    <string name="open_failed">ماقدرتش أفتحه</string>
+    <string name="widget_label">Z150X · الركنة</string>
+    <string name="widget_description">موتوسيكلك راكن فين، وآخر مشوار ليك</string>
+    <string name="widget_parked">🅿️ موتوسيكلك</string>
+    <string name="widget_last_ride">آخر مشوار</string>
+    <string name="widget_last_ride_sub">متوسط %1$d · أقصى %2$d كم/س</string>
+    <string name="widget_no_rides">لسه مفيش مشاوير</string>
+    <string name="all_rides_button">🗺 الكل</string>
+    <string name="all_rides_title">كل المشاوير اللي سقتها</string>
+    <string name="trips_loading_all">بيحمّل كل مشاويرك…</string>
+    <string name="all_rides_stats">%1$d مشوار · %2$s كم</string>
+    <string name="live_pill_start">📍 شارك مشواري مباشر</string>
+    <string name="live_pill_active">📍 بتشارك مباشر · دوس للإيقاف</string>
+</resources>

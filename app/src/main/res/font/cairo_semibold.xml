@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cairo (SIL OFL 1.1, licenses/OFL-Cairo.txt) at a fixed weight, for Arabic text in any app language. -->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font android:font="@font/cairo_variable" android:fontStyle="normal" android:fontWeight="600" android:fontVariationSettings="'wght' 600" />
+</font-family>

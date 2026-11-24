@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_channel">Waiting for the bike</string>
+    <string name="watch_title">Waiting for %1$s</string>
+    <string name="watch_text">Low-power mode: it connects when you switch the bike on</string>
+    <string name="watch_stop">Stop waiting</string>
+    <string name="watch_setting">Keep waiting for the bike in low-power mode</string>
+    <string name="watch_setting_desc">After 20 minutes without the bike, instead of giving up, the app checks now and then whether the bike\'s Wi-Fi is up (it only exists with the ignition on) and connects by itself. No wake locks: it\'s quickest when you look at your phone.</string>
+    <string name="park_cam_hint">Take a photo of where you leave the bike (floor, bay number…)</string>
+    <string name="park_photo_failed">Couldn\'t take the photo. Try again.</string>
+    <string name="qr_camera_failed">The camera can\'t start on this phone. Use \"Import QR from photo\" with a screenshot or photo of the dash QR instead.</string>
+    <!-- v2.2 home (proposal A) -->
+    <string name="bt_trigger_wifi_off_title">%1$s is on, but your phone\'s Wi‑Fi is off</string>
+    <string name="bt_trigger_wifi_off_text">Tap to switch Wi‑Fi on: Z150X will connect by itself.</string>
+    <string name="dest_save">Save</string>
+    <string name="nav_app_title">Navigate with</string>
+    <string name="nav_app_remember">Remember my choice</string>
+</resources>

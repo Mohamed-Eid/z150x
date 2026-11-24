@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ob_scan_title"
+        style="@style/Z.Title"
+        android:text="@string/z_ob_scan" />
+
+    <TextView
+        style="@style/Z.Sub"
+        android:text="@string/z_ob_scan_sub" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_z_scan_frame"
+        android:minHeight="220dp">
+
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_z_scan_corners" />
+
+            <View
+                android:id="@+id/ob_scan_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_z_scan_line"
+                android:elevation="6dp"
+                android:outlineAmbientShadowColor="@color/brand_orange"
+                android:outlineSpotShadowColor="@color/brand_orange" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView style="@style/Z.Num" android:background="@drawable/bg_z_num_dark" android:text="1" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/z_scan_step1"
+            android:textColor="@color/text_tertiary"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView style="@style/Z.Num" android:background="@drawable/bg_z_num_dark" android:text="2" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/z_scan_step2"
+            android:textColor="@color/text_tertiary"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ob_scan_start"
+        style="@style/Z.Primary"
+        android:layout_marginTop="18dp"
+        android:text="@string/z_scan_start" />
+
+    <TextView
+        android:id="@+id/ob_scan_later"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/z_scan_later"
+        android:textColor="#FF6B5E"
+        android:textSize="16sp" />
+</LinearLayout>

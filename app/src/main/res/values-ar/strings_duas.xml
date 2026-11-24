@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="duas_title">أدعية الركوب</string>
+    <string name="duas_sub">أدعية من السنة تقولها قبل ما تخرج من البيت أو تركب أو تسافر.</string>
+    <string name="dua_1_title">دعاء الخروج من البيت</string>
+    <string name="dua_2_title">دعاء ركوب الاسكوتر</string>
+    <string name="dua_3_title">دعاء السفر</string>
+    <string name="dua_4_title">دعاء الحفظ من الحوادث والمكروه</string>
+    <string name="dua_5_title">دعاء الرجوع للبيت</string>
+    <string name="duas_mark">قريته</string>
+    <string name="duas_done">تمّ ✓</string>
+    <string name="duas_progress">قريت %1$d من %2$d النهارده</string>
+    <string name="duas_all_done">قريتهم كلهم النهارده. ربنا يحفظك ❤️</string>
+    <string name="duas_reset">ابدأ من الأول</string>
+    <string name="duas_notif_title">قبل ما تتحرك 🤲</string>
+    <string name="duas_notif_text">دعاء الخروج من البيت والركوب والسفر</string>
+    <string name="duas_channel">تذكير أدعية الركوب</string>
+    <string name="duas_home_sub">قريت %1$d من %2$d النهارده</string>
+    <string name="z_set_duas">أدعية الركوب</string>
+    <string name="z_set_duas_sub">تذكير لما تفتح التطبيق، وقائمة تقراها وتعلّم عليها</string>
+    <string name="z_set_duas_open">افتح الأدعية</string>
+</resources>

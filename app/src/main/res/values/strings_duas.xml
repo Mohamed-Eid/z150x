@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ride duas (أدعية الركوب). The duas themselves are Arabic in every language; only the headings
+     and buttons are translated (values-ar/strings_duas.xml). -->
+<resources>
+    <string name="duas_title">Ride duas</string>
+    <string name="duas_sub">From the Sunnah: say them before you leave home, ride or travel.</string>
+    <string name="dua_1_title">Leaving home</string>
+    <string name="dua_2_title">Getting on the scooter</string>
+    <string name="dua_3_title">Travelling (a long ride)</string>
+    <string name="dua_4_title">Protection from accidents and harm</string>
+    <string name="dua_5_title">Coming home</string>
+    <string name="duas_mark">Mark as read</string>
+    <string name="duas_done">Read ✓</string>
+    <string name="duas_progress">%1$d of %2$d read today</string>
+    <string name="duas_all_done">All read today. Ride safe ❤️</string>
+    <string name="duas_reset">Start again</string>
+    <string name="duas_notif_title">Before you ride 🤲</string>
+    <string name="duas_notif_text">The duas for leaving home, riding and travelling</string>
+    <string name="duas_channel">Ride duas reminder</string>
+    <string name="duas_home_sub">%1$d of %2$d read today</string>
+    <string name="z_set_duas">Ride duas</string>
+    <string name="z_set_duas_sub">A reminder when you open the app, and a checklist to read</string>
+    <string name="z_set_duas_open">Open the duas</string>
+
+    <string name="dua_intro" translatable="false">ربنا يحفظك ويحفظ طريقك، ويبعد عنك كل سوء، ويردك لأهلك سالمًا غانمًا ❤️</string>
+    <string name="dua_1_text" translatable="false">بِسْمِ اللهِ، تَوَكَّلْتُ عَلَى اللهِ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ</string>
+    <string name="dua_1_note" translatable="false">قال ﷺ لمن قالها: «هُدِيتَ وَكُفِيتَ وَوُقِيتَ، وَتَنَحَّى عَنْهُ الشَّيْطَانُ»</string>
+    <string name="dua_2_text" translatable="false">بِسْمِ اللهِ · الْحَمْدُ لِلَّهِ\n﴿سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ ۝ وَإِنَّا إِلَىٰ رَبِّنَا لَمُنقَلِبُونَ﴾\nالْحَمْدُ لِلَّهِ، الْحَمْدُ لِلَّهِ، الْحَمْدُ لِلَّهِ، اللهُ أَكْبَرُ، اللهُ أَكْبَرُ، اللهُ أَكْبَرُ، سُبْحَانَكَ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</string>
+    <string name="dua_2_note" translatable="false">عند الركوب: بسم الله، ثم الحمد لله، ثم دعاء الركوب.</string>
+    <string name="dua_3_text" translatable="false">اللهُ أَكْبَرُ، اللهُ أَكْبَرُ، اللهُ أَكْبَرُ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ ۝ وَإِنَّا إِلَىٰ رَبِّنَا لَمُنقَلِبُونَ.\nاللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا الْبِرَّ وَالتَّقْوَىٰ، وَمِنَ الْعَمَلِ مَا تَرْضَىٰ. اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا، وَاطْوِ عَنَّا بُعْدَهُ. اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ، وَالْخَلِيفَةُ فِي الْأَهْلِ. اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ وَعْثَاءِ السَّفَرِ، وَكَآبَةِ الْمَنْظَرِ، وَسُوءِ الْمُنْقَلَبِ فِي الْمَالِ وَالْأَهْلِ.</string>
+    <string name="dua_3_note" translatable="false">لو مسافر مشوار طويل.</string>
+    <string name="dua_4_text" translatable="false">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ\nبِسْمِ اللهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ</string>
+    <string name="dua_4_note" translatable="false">تقال 3 مرات صباحًا و3 مرات مساءً.</string>
+    <string name="dua_5_text" translatable="false">آيِبُونَ، تَائِبُونَ، عَابِدُونَ، لِرَبِّنَا حَامِدُونَ</string>
+    <string name="dua_safety" translatable="false">وافتكر: التوكل على الله مع الأخذ بالأسباب؛ البس الخوذة، والبس معدات الحماية، والتزم بالسرعة الآمنة. ربنا يحفظك من كل مكروه.</string>
+    <string name="dua_closing" translatable="false">اللهم احفظه في طريقه، واكفِه شر الحوادث، واحفظه من بين يديه ومن خلفه وعن يمينه وعن شماله ومن فوقه، وردّه إلى أهله سالمًا مطمئنًا. آمين ❤️</string>
+</resources>

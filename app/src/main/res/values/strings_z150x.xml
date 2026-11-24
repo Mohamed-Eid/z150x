@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Z150X redesign: home, splash and onboarding. Arabic lives in values-ar/strings_z150x.xml. -->
+<resources>
+    <string name="z_brand" translatable="false">Z150X</string>
+    <string name="z_basmala" translatable="false">بسم الله الرحمن الرحيم</string>
+
+    <!-- Home -->
+    <string name="z_switch_lang">Switch to Arabic</string>
+    <string name="z_lang_btn" translatable="false">ع</string>
+    <string name="z_ring_connect">CONNECT</string>
+    <string name="z_ring_linking">LINKING</string>
+    <string name="z_ring_live">LIVE</string>
+    <string name="z_ring_retry">RETRY</string>
+    <string name="z_ring_sub_idle">or just start the engine</string>
+    <string name="z_ring_sub_new">scan the dash once first</string>
+    <string name="z_ring_sub_busy">a few seconds…</string>
+    <string name="z_ring_sub_live">tap to stop</string>
+    <string name="z_ring_sub_error">tap to try again</string>
+    <string name="z_status_auto_on">Bike off · auto-connect on</string>
+    <string name="z_find_bike">Find bike</string>
+    <string name="z_park_none">Not parked yet</string>
+    <string name="z_park_sub">%1$s · %2$s</string>
+    <string name="z_park_save_here">Save this spot</string>
+    <string name="z_park_save_photo">Save this spot with a photo</string>
+    <string name="z_park_saved">Parking spot saved</string>
+    <string name="z_service">Service</string>
+    <string name="z_service_none">Set up reminders</string>
+    <string name="z_last_ride">Last ride</string>
+    <string name="z_no_rides">No rides yet</string>
+    <string name="z_ride_sub">%1$s · %2$d min</string>
+    <string name="z_currency">EGP</string>
+    <string name="z_km">km</string>
+    <string name="z_controls">Controls</string>
+    <string name="z_controls_sub">Handlebar buttons and the on-screen pad</string>
+    <string name="z_nav_home">Home</string>
+    <string name="z_nav_bike">My bike</string>
+    <string name="z_nav_settings">Settings</string>
+    <string name="z_diagnostics">Diagnostics</string>
+    <string name="z_share_log">Share log</string>
+    <string name="z_clear">Clear</string>
+    <string name="z_hus_title">Start Android Auto\'s head unit server, then Connect</string>
+    <string name="z_hus_open">Open</string>
+    <string name="z_hus_how">How?</string>
+
+    <!-- Settings (simple) -->
+    <string name="z_set_dash">Dash</string>
+    <string name="z_set_fit">Fit the picture to the dash</string>
+    <string name="z_set_fit_sub">Use the arrows while connected</string>
+    <string name="z_set_safe">Keep Android Auto clear of the dash bars</string>
+    <string name="z_set_safe_sub">The map stays full screen; search, cards and buttons move away from the clock and gauges</string>
+    <string name="z_set_top">Top bar</string>
+    <string name="z_set_bottom">Bottom bar</string>
+    <string name="z_set_pct">%1$d%%</string>
+    <string name="z_set_layout">Map layout</string>
+    <string name="z_set_layout_split">Map + cards</string>
+    <string name="z_set_layout_full">Full-screen map</string>
+    <string name="z_set_next_connect">Applies the next time you connect</string>
+    <string name="z_set_colors">Map colours</string>
+    <string name="z_set_auto">Auto</string>
+    <string name="z_set_day">Day</string>
+    <string name="z_set_night">Night</string>
+    <string name="z_set_connection">Connection</string>
+    <string name="z_set_auto_connect">Connect by itself when the bike is on</string>
+    <string name="z_set_auto_connect_sub">As soon as the bike\'s Wi‑Fi appears</string>
+    <string name="z_set_riding">Riding</string>
+    <string name="z_set_log_rides">Log my rides</string>
+    <string name="z_set_parking">Remember where I parked</string>
+    <string name="z_set_rain">Rain alert when I park</string>
+    <string name="z_set_app">App</string>
+    <string name="z_set_language">Language</string>
+    <string name="z_set_language_value">English</string>
+    <string name="z_set_about">About</string>
+    <string name="z_set_advanced">Advanced settings</string>
+    <string name="z_set_advanced_sub">Video, Wi‑Fi, button timing, dash clock… The defaults are the recommended ones.</string>
+
+    <!-- About: the Z150X author -->
+    <string name="z_about_made_by">Made by</string>
+    <string name="z_about_author" translatable="false">Mohamed Eid</string>
+    <string name="z_about_for_egypt">Built for Zontes Z150X riders in Egypt 🇪🇬. A question, an idea or a problem on your bike? Send me a message.</string>
+    <string name="z_about_whatsapp">WhatsApp</string>
+    <string name="z_about_github" translatable="false">GitHub</string>
+    <string name="z_about_legal">© 2026 Mohamed Eid.</string>
+    <string name="z_about_legal_link">Licence and source code</string>
+    <string name="z_about_privacy">Privacy policy</string>
+    <string name="z_notif_aa_gone_title">Android Auto stopped</string>
+    <string name="z_notif_aa_gone_text">Trying to bring it back. If the dash stays frozen, tap Stop, then Connect.</string>
+    <string name="z_notif_mic_blocked_title">Microphone is off for Android Auto</string>
+    <string name="z_notif_mic_blocked_text">Android Auto looks different from last time, and it was not updated. If you just reinstalled Android Auto, tap Allow. If not, leave it off.</string>
+    <string name="z_notif_mic_blocked_allow">Allow</string>
+
+    <!-- Onboarding -->
+    <string name="z_ob_lets_ride">LET\'S RIDE.</string>
+    <string name="z_ob_pick_lang" translatable="false">Pick your language · اختار لغتك</string>
+    <string name="z_ob_arabic" translatable="false">العربية</string>
+    <string name="z_ob_arabic_sub" translatable="false">Arabic</string>
+    <string name="z_ob_english" translatable="false">English</string>
+    <string name="z_ob_english_sub" translatable="false">إنجليزي</string>
+    <string name="z_ob_lang_hint">Tap one to continue · No account needed</string>
+
+    <string name="z_ob_gear_up">GEAR UP.</string>
+    <string name="z_ob_perm_sub">Z150X needs these to talk to your bike, log your rides and find where you parked. Your rides and your voice stay on the phone. Only a rough area goes out, for the rain alert and ride names, and you can switch both off in Settings.</string>
+    <string name="z_perm_nearby">Nearby devices</string>
+    <string name="z_perm_nearby_sub">Find the dash over Wi‑Fi</string>
+    <string name="z_perm_location">Location</string>
+    <string name="z_perm_location_sub">Maps, and where you parked</string>
+    <string name="z_perm_camera">Camera</string>
+    <string name="z_perm_camera_sub">Scan the code on the dash once</string>
+    <string name="z_perm_notif">Notifications</string>
+    <string name="z_perm_notif_sub">Keep the link alive while you ride</string>
+    <string name="z_allow_all">Allow all</string>
+    <string name="z_continue">Continue</string>
+
+    <string name="z_ob_unlock">UNLOCK ANDROID AUTO.</string>
+    <string name="z_ob_unlock_sub">A one-time switch inside Android Auto so it can talk to the Z150X dash.</string>
+    <string name="z_aa_step1">Tap “Version” 10 times</string>
+    <string name="z_aa_step1_sub">Android Auto settings → bottom</string>
+    <string name="z_aa_step2">Unknown sources</string>
+    <string name="z_aa_step2_sub">⋮ menu → Developer settings</string>
+    <string name="z_aa_step3">Start head unit server</string>
+    <string name="z_aa_step3_sub">Same menu · again after AA updates</string>
+    <string name="z_aa_open">Open Android Auto settings</string>
+    <string name="z_aa_install">Install Android Auto</string>
+    <string name="z_done_next">Done, next</string>
+
+    <string name="z_ob_scan">SCAN THE DASH.</string>
+    <string name="z_ob_scan_sub">Switch the bike on and bring up the pairing code on the dash. You only do this once.</string>
+    <string name="z_scan_step1">Turn the key and wait for the dash</string>
+    <string name="z_scan_step2">Hold ▲ until the code appears</string>
+    <string name="z_scan_start">Open the camera</string>
+    <string name="z_scan_later">I\'ll do it later</string>
+
+    <!-- Rides: naming from the map, save failure, map attribution -->
+    <string name="z_set_name_rides">Name my rides from the map</string>
+    <string name="z_set_name_rides_sub">Sends the area where each ride starts and ends to OpenStreetMap\'s Nominatim service to get a place name. When off, rides are named by date.</string>
+    <string name="z_trips_save_failed">Couldn\'t save the ride. Check the free space on your phone.</string>
+    <string name="z_map_attribution">© OpenStreetMap contributors</string>
+</resources>

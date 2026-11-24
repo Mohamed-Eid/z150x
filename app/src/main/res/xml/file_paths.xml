@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Only folders the app shares on purpose (logs, settings export, trip GPX, parking
+     photo for the camera, video dumps attached to logs). Nothing else in files/ is reachable. -->
+<paths>
+    <cache-path name="logs" path="logs/" />
+    <cache-path name="settings" path="settings/" />
+    <cache-path name="trip-export" path="trip-export/" />
+    <files-path name="parking" path="parking/" />
+    <external-files-path name="video" path="video/" />
+</paths>

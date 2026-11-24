@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Arabic: the same font name resolves to Cairo (SIL OFL 1.1, licenses/OFL-Cairo.txt). -->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <font android:font="@font/cairo_variable" android:fontStyle="normal" android:fontWeight="700" android:fontVariationSettings="'wght' 700" />
+</font-family>

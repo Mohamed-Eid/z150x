@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="speed_volume_title">الصوت حسب السرعة</string>
+    <string name="speed_volume_desc">بيعلّي صوت الميديا في الموبايل (صوت الملاحة والمزيكا) كل ما تسرع، عشان يغلب صوت الهوا. الصوت اللي انت ضابطه هو الأساس: غيّره وقت ما تحب والزيادة هتمشي معاه. بيقف مؤقتًا وزراير الهاندل بتتحكم في أندرويد أوتو.</string>
+    <string name="speed_volume_off">مقفول</string>
+    <string name="speed_volume_low">قليل</string>
+    <string name="speed_volume_medium">متوسط</string>
+    <string name="speed_volume_high">عالي</string>
+    <string name="speed_volume_status_off">مقفول</string>
+    <string name="speed_volume_status_waiting">مستني التوصيل بالموتوسيكل…</string>
+    <string name="speed_volume_status_paused">متوقف مؤقتًا: زراير الهاندل مثبّتة الصوت</string>
+    <string name="speed_volume_status_no_gps">شغال: مستني سرعة الـ GPS…</string>
+    <string name="speed_volume_status_live">شغال: %1$d كم/س · زيادة +%2$d</string>
+    <string name="speed_volume_advanced_show">متقدم ▾</string>
+    <string name="speed_volume_advanced_hide">متقدم ▴</string>
+    <string name="speed_volume_custom">منحنى مخصص (بدل منحنى المستوى)</string>
+    <string name="speed_volume_start_label">ابدأ الزيادة من: %1$d كم/س</string>
+    <string name="speed_volume_step_label">درجة زيادة كل: %1$d كم/س</string>
+    <string name="speed_volume_max_label">أقصى زيادة: +%1$d درجات</string>
+    <string name="speed_volume_custom_hint">الدرجات على مقياس صوت من 15 درجة. لازم يكون فيه مستوى غير «مقفول» متختار عشان المنحنى المخصص يشتغل.</string>
+</resources>

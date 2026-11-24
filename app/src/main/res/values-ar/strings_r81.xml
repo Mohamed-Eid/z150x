@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bike_gone_channel">مش لاقي الموتوسيكل</string>
+    <string name="bike_gone_title">بطّلنا نستنى الموتوسيكل</string>
+    <string name="bike_gone_text">الموتوسيكل كان مطفي 20 دقيقة، فالتطبيق بطّل يدوّر عليه عشان يوفر البطارية. دوس وصّل لما ترجع للموتوسيكل.</string>
+</resources>

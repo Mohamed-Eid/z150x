@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trips_logging_off">تسجيل المشاوير مقفول: المشاوير الجديدة مش بتتحفظ (ولا بتتحسب في الأرقام القياسية أو الجوايز أو الصيانة).</string>
+    <string name="trips_logging_enable">شغّل</string>
+    <string name="trips_logging_enabled">تسجيل المشاوير شغال — مشوارك الجاي هيتحفظ</string>
+    <string name="wifi_picker_hint">لو أندرويد طلب يتوصل بـ %1$s، دوس «اتصال» (Connect): ده واي فاي موتوسيكلك</string>
+    <string name="wifi_off_title">شغّل الواي فاي</string>
+    <string name="wifi_off_message">Z150X بيتوصل بالموتوسيكل عن طريق الواي فاي، والواي فاي في موبايلك مقفول. شغّله (مش محتاج تدخل على أي شبكة) والتوصيل هيكمّل لوحده.</string>
+    <string name="wifi_off_turn_on">شغّل الواي فاي</string>
+    <string name="fuel_pill">⛽ بنزينة قريبة (سعر بنزين 95)</string>
+    <string name="help_pill">❓ مساعدة</string>
+    <string name="park_photo_button">📸 اركن بصورة</string>
+    <string name="park_photo_no_camera">مفيش تطبيق كاميرا</string>
+    <string name="park_photo_saved">مكان الركنة اتحفظ بصورة</string>
+    <string name="parked_options_title">موتوسيكلك</string>
+    <string name="parked_walk">🚶 امشي لحد هناك</string>
+    <string name="parked_view_photo">📷 شوف الصورة</string>
+    <string name="parked_add_photo">📸 ضيف صورة</string>
+    <string name="parked_retake_photo">📸 صوّر تاني</string>
+    <string name="parked_delete">🗑️ انسى المكان ده</string>
+    <string name="whats_new_ok">تمام</string>
+    <string name="park_photo_need_camera">اسمح بالكاميرا عشان تصوّر مكان الركنة</string>
+    <string name="fit_open">🎯 ظبّط الصورة على الشاشة (مباشر)</string>
+    <string name="fit_open_hint">الأسهم على الموبايل، والنتيجة مباشرة على الموتوسيكل. وصّل الأول عشان تشوفها على الشاشة.</string>
+    <string name="fit_title">ظبّط على الشاشة</string>
+    <string name="fit_status_live">● مباشر: بص على شاشة الموتوسيكل</string>
+    <string name="fit_status_offline">مش متوصل: تقدر تظبّط، بس وصّل بالموتوسيكل عشان تشوف النتيجة مباشر.</string>
+    <string name="fit_how">الشاشة بتعرض إطار أصفر: ده المكان اللي أندرويد أوتو بيترسم فيه. حرّك كل حافة بالأسهم بتاعتها لحد ما الخط الأصفر يقعد بالظبط على حافة الشاشة الظاهرة، من الأربع جهات. دوس مطوّل على السهم عشان يتحرك أسرع.</string>
+    <string name="fit_margins_now">فوق %1$d · تحت %2$d · شمال %3$d · يمين %4$d px\nمساحة أندرويد أوتو: %5$d × %6$d</string>
+    <string name="fit_step_fine">دقيق (2 px)</string>
+    <string name="fit_step_coarse">سريع (10 px)</string>
+    <string name="fit_mode_title">إزاي تملا الإطار</string>
+    <string name="fit_mode_fill">املا</string>
+    <string name="fit_mode_fit">الصورة كاملة</string>
+    <string name="fit_mode_stretch">مطّ</string>
+    <string name="fit_mode_hint">املا: من غير شرايط سودا، ممكن يقص حتة صغيرة. الصورة كاملة: مفيش قص، بس فيه شرايط سودا. مطّ: بيملا كل حاجة، بس الصورة بتتشوه شوية. التغيير بيبان على طول.</string>
+    <string name="fit_shape_title">شكل الشاشة لأندرويد أوتو</string>
+    <string name="fit_shape_manual">يدوي: %1$d × %2$d. أندرويد أوتو بيرتب شاشته على الشكل ده.</string>
+    <string name="fit_shape_off">مقفول: أندرويد أوتو بيستخدم شكله العادي.</string>
+    <string name="fit_shape_auto_is">تلقائي: %1$d × %2$d (من موتوسيكلك).</string>
+    <string name="fit_shape_auto_unknown">تلقائي: لسه مش معروف (وصّل مرة).</string>
+    <string name="fit_shape_from_frame">= الإطار الأصفر</string>
+    <string name="fit_shape_save">احفظ المقاس</string>
+    <string name="fit_shape_auto">تلقائي</string>
+    <string name="fit_shape_hint">لو الخريطة باينة مقصوصة أو مضغوطة بعد الظبط، دوس «= الإطار الأصفر» عشان أندرويد أوتو يرسم على المقاس ده بالظبط. بينفع للشاشات الطولية كمان. الإعداد ده محتاج أندرويد أوتو يعيد التشغيل.</string>
+    <string name="fit_shape_invalid">اكتب عرض وطول (16 أو أكتر)</string>
+    <string name="fit_shape_reconnect">الشكل الجديد بيتطبق لما أندرويد أوتو يعيد التشغيل. نعيد التشغيل دلوقتي؟ الشاشة هتسوّد كام ثانية.</string>
+    <string name="fit_shape_reconnect_now">أعد التشغيل دلوقتي</string>
+    <string name="fit_shape_reconnect_later">بعدين</string>
+    <string name="fit_shape_saved_next">اتحفظ: هيتطبق في التوصيل الجاي</string>
+    <string name="fit_undo">تراجع</string>
+    <string name="fit_reset">الافتراضي بتاع الموتوسيكل</string>
+    <string name="fit_done">تمام</string>
+    <string name="fit_more_options">الدقة والاتجاه وصفحات الهوامش القديمة: موجودين في الإعدادات ← الشاشة والعرض</string>
+    <string name="bt_trigger_channel">لقينا الموتوسيكل</string>
+    <string name="bt_trigger_title">%1$s اشتغل</string>
+    <string name="bt_trigger_text">دوس عشان توصّل بالشاشة</string>
+    <string name="mic_perm_title">المايك للأوامر الصوتية</string>
+    <string name="mic_perm_message">عشان تستخدم «Ok Google» أو زرار الصوت في الإنتركوم أو الساعة وانت متوصل، Z150X محتاج المايك.\n\nاختار «أثناء استخدام التطبيق». لو اخترت «المرة دي بس» أو «اسأل كل مرة» الصوت ممكن يقف في نص المشوار.</string>
+    <string name="mic_perm_allow">اسمح</string>
+    <string name="mic_perm_settings">افتح الإعدادات</string>
+    <string name="mic_perm_not_now">مش دلوقتي</string>
+</resources>

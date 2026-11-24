@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Z150X: Arabic (Egyptian). Strings not listed here fall back to English. -->
+<resources>
+    <string name="app_name">Z150X</string>
+
+    <!-- Home -->
+    <string name="z_switch_lang">Switch to English</string>
+    <string name="z_lang_btn">EN</string>
+    <string name="z_ring_connect">وصّل</string>
+    <string name="z_ring_linking">بيتوصل</string>
+    <string name="z_ring_live">شغّال</string>
+    <string name="z_ring_retry">تاني</string>
+    <string name="z_ring_sub_idle">أو شغّل الموتور بس</string>
+    <string name="z_ring_sub_new">امسح كود الشاشة الأول</string>
+    <string name="z_ring_sub_busy">ثواني…</string>
+    <string name="z_ring_sub_live">دوس للإيقاف</string>
+    <string name="z_ring_sub_error">دوس عشان تحاول تاني</string>
+    <string name="z_status_auto_on">الموتوسيكل مطفي · التوصيل التلقائي شغال</string>
+    <string name="z_find_bike">مكان الركنة</string>
+    <string name="z_park_none">لسه ماركنتش</string>
+    <string name="z_park_sub">%1$s · %2$s</string>
+    <string name="z_park_save_here">احفظ المكان ده</string>
+    <string name="z_park_save_photo">احفظ المكان ده بصورة</string>
+    <string name="z_park_saved">اتحفظ مكان الركنة</string>
+    <string name="z_service">الصيانة</string>
+    <string name="z_service_none">ظبّط التنبيهات</string>
+    <string name="z_last_ride">آخر مشوار</string>
+    <string name="z_no_rides">لسه مفيش مشاوير</string>
+    <string name="z_ride_sub">%1$s · %2$d دقيقة</string>
+    <string name="z_currency">ج.م</string>
+    <string name="z_km">كم</string>
+    <string name="z_controls">التحكم</string>
+    <string name="z_controls_sub">زراير الهاندل ولوحة التحكم على الموبايل</string>
+    <string name="z_nav_home">الرئيسية</string>
+    <string name="z_nav_bike">الموتوسيكل</string>
+    <string name="z_nav_settings">الإعدادات</string>
+    <string name="z_diagnostics">التشخيص</string>
+    <string name="z_share_log">شارك السجل</string>
+    <string name="z_clear">امسح</string>
+    <string name="z_hus_title">شغّل الـ head unit server في أندرويد أوتو، وبعدين وصّل</string>
+    <string name="z_hus_open">افتح</string>
+    <string name="z_hus_how">إزاي؟</string>
+
+    <!-- Settings (simple) -->
+    <string name="z_set_dash">الشاشة</string>
+    <string name="z_set_fit">ظبّط الصورة على الشاشة</string>
+    <string name="z_set_fit_sub">استخدم الأسهم وانت متوصل</string>
+    <string name="z_set_safe">خلّي أندرويد أوتو بعيد عن شرايط الشاشة</string>
+    <string name="z_set_safe_sub">الخريطة تفضل مالية الشاشة، والبحث والكروت والزراير يبعدوا عن الساعة والعدادات</string>
+    <string name="z_set_top">الشريط اللي فوق</string>
+    <string name="z_set_bottom">الشريط اللي تحت</string>
+    <string name="z_set_pct">%1$d%%</string>
+    <string name="z_set_layout">شكل الخريطة</string>
+    <string name="z_set_layout_split">خريطة + كروت</string>
+    <string name="z_set_layout_full">خريطة مالية الشاشة</string>
+    <string name="z_set_next_connect">هيتطبق المرة الجاية لما توصّل</string>
+    <string name="z_set_colors">ألوان الخريطة</string>
+    <string name="z_set_auto">تلقائي</string>
+    <string name="z_set_day">نهار</string>
+    <string name="z_set_night">ليل</string>
+    <string name="z_set_connection">التوصيل</string>
+    <string name="z_set_auto_connect">وصّل لوحده لما الموتوسيكل يشتغل</string>
+    <string name="z_set_auto_connect_sub">أول ما واي فاي الموتوسيكل يظهر</string>
+    <string name="z_set_riding">المشوار</string>
+    <string name="z_set_log_rides">سجّل مشاويري</string>
+    <string name="z_set_parking">افتكر أنا ركنت فين</string>
+    <string name="z_set_rain">نبّهني لو هتمطر لما أركن</string>
+    <string name="z_set_app">التطبيق</string>
+    <string name="z_set_language">اللغة</string>
+    <string name="z_set_language_value">العربية</string>
+    <string name="z_set_about">عن التطبيق</string>
+    <string name="z_set_advanced">إعدادات متقدمة</string>
+    <string name="z_set_advanced_sub">الفيديو، الواي فاي، توقيت الزراير، ساعة الشاشة… الافتراضي هو المُوصى بيه.</string>
+
+    <!-- About: the Z150X author -->
+    <string name="z_about_made_by">من تطوير</string>
+    <string name="z_about_for_egypt">معمول لراكبي Zontes Z150X في مصر 🇪🇬. عندك سؤال أو فكرة أو مشكلة في الموتوسيكل؟ ابعتلي رسالة.</string>
+    <string name="z_about_whatsapp">واتساب</string>
+    <string name="z_about_legal">\u200F© 2026 Mohamed Eid.</string>
+    <string name="z_about_legal_link">الرخصة والكود المصدري</string>
+    <string name="z_about_privacy">سياسة الخصوصية</string>
+    <string name="z_notif_aa_gone_title">Android Auto وقف</string>
+    <string name="z_notif_aa_gone_text">بنحاول نرجّعه. لو الشاشة فضلت واقفة، دوس «وقّف» وبعدين «وصّل».</string>
+    <string name="z_notif_mic_blocked_title">المايك مقفول لـ Android Auto</string>
+    <string name="z_notif_mic_blocked_text">Android Auto شكله مختلف عن المرة اللي فاتت ومتعملوش تحديث. لو لسه مسطّبه من جديد دوس «اسمح». لو لأ، سيبه مقفول.</string>
+    <string name="z_notif_mic_blocked_allow">اسمح</string>
+
+    <!-- Onboarding -->
+    <string name="z_ob_lets_ride">يلا بينا</string>
+    <string name="z_ob_lang_hint">اختار واحدة وكمّل · من غير حساب</string>
+    <string name="z_ob_gear_up">جهّز نفسك</string>
+    <string name="z_ob_perm_sub">تطبيق Z150X محتاج دول عشان يكلم الموتوسيكل ويسجّل رحلاتك ويعرف ركنت فين. رحلاتك وصوتك بيفضلوا على الموبايل. اللي بيطلع بس هو منطقتك بالتقريب، لتنبيه المطر وأسماء الرحلات، وتقدر تقفلهم من الإعدادات.</string>
+    <string name="z_perm_nearby">الأجهزة القريبة</string>
+    <string name="z_perm_nearby_sub">يلاقي الشاشة عن طريق الواي فاي</string>
+    <string name="z_perm_location">الموقع</string>
+    <string name="z_perm_location_sub">الخرايط ومكان ركنتك</string>
+    <string name="z_perm_camera">الكاميرا</string>
+    <string name="z_perm_camera_sub">تمسح كود الشاشة مرة واحدة</string>
+    <string name="z_perm_notif">الإشعارات</string>
+    <string name="z_perm_notif_sub">يفضل متوصل وانت سايق</string>
+    <string name="z_allow_all">اسمح بالكل</string>
+    <string name="z_continue">كمّل</string>
+
+    <string name="z_ob_unlock">فعّل أندرويد أوتو</string>
+    <string name="z_ob_unlock_sub">خطوة مرة واحدة جوه أندرويد أوتو عشان يقدر يكلم شاشة الـZ150X.</string>
+    <string name="z_aa_step1">دوس 10 مرات على «Version»</string>
+    <string name="z_aa_step1_sub">إعدادات أندرويد أوتو ← تحت خالص</string>
+    <string name="z_aa_step2">Unknown sources</string>
+    <string name="z_aa_step2_sub">قائمة ⋮ ← Developer settings</string>
+    <string name="z_aa_step3">Start head unit server</string>
+    <string name="z_aa_step3_sub">نفس القائمة · كررها بعد أي تحديث</string>
+    <string name="z_aa_open">افتح إعدادات أندرويد أوتو</string>
+    <string name="z_aa_install">نزّل أندرويد أوتو</string>
+    <string name="z_done_next">تمام، اللي بعده</string>
+
+    <string name="z_ob_scan">امسح كود الشاشة</string>
+    <string name="z_ob_scan_sub">شغّل الموتوسيكل وطلّع كود الربط على الشاشة. هتعملها مرة واحدة بس.</string>
+    <string name="z_scan_step1">دوّر المفتاح واستنى الشاشة تفتح</string>
+    <string name="z_scan_step2">دوس مطوّل على زرار ▲ لحد ما الكود يظهر</string>
+    <string name="z_scan_start">افتح الكاميرا</string>
+    <string name="z_scan_later">بعدين</string>
+
+    <string name="main_no_bike_paired">لسه مفيش موتوسيكل متربط — دوس وصّل وامسح كود الشاشة</string>
+    <string name="main_paired">%1$s محفوظ · دوس وصّل</string>
+    <string name="main_invalid_qr">الكود ده مش صالح</string>
+    <string name="widget_connect_starting">بيوصّل…</string>
+
+    <!-- Connection status (ConnectionState) -->
+    <string name="conn_ready">جاهز</string>
+    <string name="conn_starting_aa">بيشغّل أندرويد أوتو…</string>
+    <string name="conn_aa_video_live">أندرويد أوتو شغال — بيتوصل بالموتوسيكل…</string>
+    <string name="conn_joining_wifi">بيتوصل بواي فاي الموتوسيكل…</string>
+    <string name="conn_pxc_connecting">بيتوصل بالشاشة…</string>
+    <string name="conn_streaming">متوصل — شغّال على الشاشة</string>
+    <string name="conn_mirroring">بيعرض الموبايل على الشاشة</string>
+    <string name="conn_reconnecting">الاتصال وقع — بيرجع يتوصل…</string>
+    <string name="conn_waiting_for_bike">الموتوسيكل بعيد — مستني…</string>
+    <string name="conn_stopped">اتوقف</string>
+    <string name="conn_error">حصلت مشكلة</string>
+    <string name="conn_detail_need_nearby">اسمح بالأجهزة القريبة — أندرويد أوتو محتاجها عشان يشتغل على الشاشة</string>
+    <string name="conn_detail_need_bt_on">شغّل البلوتوث — أندرويد أوتو محتاجه عشان يشتغل على الشاشة</string>
+    <string name="conn_detail_wifi_off">الواي فاي في الموبايل مقفول — افتحه عشان توصّل</string>
+    <string name="conn_detail_bike_wifi_not_found">مش لاقي واي فاي الموتوسيكل: شغّل الموتوسيكل وطلّع كود الربط على الشاشة (دوس مطوّل على ▲)، وبعدين وصّل</string>
+    <string name="conn_detail_aa_not_started">أندرويد أوتو ماشتغلش. افتح أندرويد أوتو، دوس على Version 10 مرات، وبعدين ⋮ ← Start head unit server، وجرّب توصّل تاني.</string>
+    <string name="conn_detail_aa_dropped">أندرويد أوتو اشتغل وبعدين وقع. واي فاي الموتوسيكل شغال — دوس وصّل تاني.</string>
+    <string name="conn_detail_dash_no_media">الشاشة مش طالبة الصورة: طلّع كود الربط على الشاشة ودوس وصّل (لو لسه، اقفل المفتاح وافتحه تاني)</string>
+    <string name="conn_detail_dash_no_media_retry">مستني الشاشة: طلّع كود الربط عليها</string>
+
+    <!-- Rides: naming from the map, save failure, map attribution -->
+    <string name="z_set_name_rides">سمّي مشاويري من الخريطة</string>
+    <string name="z_set_name_rides_sub">بيبعت منطقة بداية ونهاية كل مشوار لخدمة Nominatim بتاعة OpenStreetMap عشان يجيب اسم المكان. لو قفلته، المشاوير هتتسمّى بالتاريخ.</string>
+    <string name="z_trips_save_failed">ماقدرتش أحفظ المشوار. اتأكد إن فيه مساحة فاضية على الموبايل.</string>
+    <string name="z_map_attribution">© المساهمون في OpenStreetMap</string>
+</resources>

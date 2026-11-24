@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Z150X · Android Auto Backup (Android 11 and older).
+     What is backed up: settings, the rides you recorded (GPS tracks), maintenance, saved places and
+     the parked-bike spot and photo, so a new phone has them. Android encrypts this backup with the
+     phone's screen lock and keeps it in the rider's own Google account.
+     What never leaves the phone:
+       - the bike's Wi‑Fi password (inside the saved QR) and the phone-hotspot password; after a
+         restore the rider scans the bike QR again
+       - the keyless (PKE) code
+       - support logs (log-history/, last_session.log, last_crash.txt): they can name nearby devices
+       - the map tile cache (osmdroid/): large, and it would push the backup over Android's 25 MB
+         limit, which stops the whole backup
+       - per-phone state (aa_peer, aa_session)
+       - crash_detector.xml and blackbox/ from the removed crash alert: the app deletes them on its
+         first start after the update (OpenCfMotoApp); excluded so a leftover is never backed up first
+     Keep in sync with data_extraction_rules.xml. -->
+<full-backup-content>
+    <exclude domain="sharedpref" path="opencfmoto_bike.xml" />
+    <exclude domain="sharedpref" path="opencfmoto_phone_hotspot.xml" />
+    <exclude domain="sharedpref" path="crash_detector.xml" />
+    <exclude domain="sharedpref" path="arrival_notice.xml" />
+    <exclude domain="sharedpref" path="companion.xml" />
+    <exclude domain="sharedpref" path="pke_box.xml" />
+    <exclude domain="sharedpref" path="aa_peer.xml" />
+    <exclude domain="sharedpref" path="aa_session.xml" />
+    <exclude domain="file" path="blackbox/" />
+    <exclude domain="file" path="log-history/" />
+    <exclude domain="file" path="last_session.log" />
+    <exclude domain="file" path="last_crash.txt" />
+    <exclude domain="file" path="osmdroid/" />
+</full-backup-content>

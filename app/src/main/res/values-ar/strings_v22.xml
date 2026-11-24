@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Z150X: Arabic (Egyptian) for values/strings_v22.xml -->
+<resources>
+    <string name="watch_channel">مستني الموتوسيكل</string>
+    <string name="watch_title">مستني %1$s</string>
+    <string name="watch_text">وضع توفير الطاقة: هيتوصل أول ما تشغّل الموتوسيكل</string>
+    <string name="watch_stop">بطّل استنى</string>
+    <string name="watch_setting">فضّل مستني الموتوسيكل في وضع توفير الطاقة</string>
+    <string name="watch_setting_desc">بعد 20 دقيقة من غير الموتوسيكل، بدل ما يستسلم، التطبيق بيشيّك كل شوية هل واي فاي الموتوسيكل شغال (مابيبقاش موجود غير والمفتاح مفتوح) ويتوصل لوحده. من غير wake locks: بيبقى أسرع لما تبص على موبايلك.</string>
+    <string name="park_cam_hint">صوّر المكان اللي سايب فيه الموتوسيكل (الدور، رقم المكان…)</string>
+    <string name="park_photo_failed">ماعرفناش ناخد الصورة. جرّب تاني.</string>
+    <string name="qr_camera_failed">الكاميرا مش راضية تشتغل على الموبايل ده. استخدم «استورد QR من صورة» بسكرين شوت أو صورة لكود الربط اللي على الشاشة.</string>
+    <!-- v2.2 home (proposal A) -->
+    <string name="bt_trigger_wifi_off_title">%1$s شغال، بس الواي فاي في موبايلك مقفول</string>
+    <string name="bt_trigger_wifi_off_text">دوس عشان تشغّل الواي فاي: Z150X هيتوصل لوحده.</string>
+    <string name="dest_save">احفظ</string>
+    <string name="nav_app_title">اتنقّل بـ</string>
+    <string name="nav_app_remember">افتكر اختياري</string>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="trips_logging_off">Trip logging is off: new rides aren\'t saved (nor counted for records, trophies or maintenance).</string>
+    <string name="trips_logging_enable">Turn on</string>
+    <string name="trips_logging_enabled">Trip logging on — your next ride will be saved</string>
+    <string name="conn_detail_need_nearby">Allow Nearby devices — Android Auto needs it to start on the dash</string>
+    <string name="conn_detail_need_bt_on">Turn on Bluetooth — Android Auto needs it to start on the dash</string>
+    <string name="conn_detail_wifi_off">Phone Wi‑Fi is off — turn it on to connect</string>
+    <string name="conn_detail_bike_wifi_not_found">Can\'t find the bike\'s Wi‑Fi: switch the bike on and bring up the pairing code on the dash (hold ▲), then Connect</string>
+    <string name="wifi_picker_hint">If Android asks to connect to %1$s, tap Connect: it\'s your bike\'s Wi‑Fi</string>
+    <string name="wifi_off_title">Turn on Wi‑Fi</string>
+    <string name="wifi_off_message">Z150X connects to the bike over Wi‑Fi, and your phone\'s Wi‑Fi is off. Turn it on (you don\'t need to join any network) and Connect carries on by itself.</string>
+    <string name="wifi_off_turn_on">Turn on Wi‑Fi</string>
+    <string name="fuel_pill">⛽ Petrol nearby (95 price)</string>
+    <string name="help_pill">❓ Help</string>
+    <string name="park_photo_button">📸 Park with photo</string>
+    <string name="park_photo_no_camera">No camera app available</string>
+    <string name="park_photo_saved">Parking spot saved with photo</string>
+    <string name="parked_options_title">Your bike</string>
+    <string name="parked_walk">🚶 Walk there</string>
+    <string name="parked_view_photo">📷 See photo</string>
+    <string name="parked_add_photo">📸 Add photo</string>
+    <string name="parked_retake_photo">📸 Retake photo</string>
+    <string name="parked_delete">🗑️ Forget this spot</string>
+    <string name="whats_new_ok">Got it</string>
+    <string name="park_photo_need_camera">Allow the camera to take the parking photo</string>
+    <string name="fit_open">🎯 Fit the screen to the dash (live)</string>
+    <string name="fit_open_hint">Arrows on the phone, result live on the bike. Connect first to see it on the dash.</string>
+    <string name="fit_title">Fit to the dash</string>
+    <string name="fit_status_live">● Live: look at the bike\'s dash</string>
+    <string name="fit_status_offline">Not connected: you can adjust, but connect to the bike to see it live.</string>
+    <string name="fit_how">The dash shows a yellow frame: that\'s where Android Auto is drawn. Move each edge with its arrows until the yellow line sits right on the visible edge of the screen, on all four sides. Hold an arrow to move faster.</string>
+    <string name="fit_margins_now">Top %1$d · bottom %2$d · left %3$d · right %4$d px\nAndroid Auto area: %5$d × %6$d</string>
+    <string name="fit_step_fine">Fine (2 px)</string>
+    <string name="fit_step_coarse">Fast (10 px)</string>
+    <string name="fit_mode_title">How to fill the frame</string>
+    <string name="fit_mode_fill">Fill</string>
+    <string name="fit_mode_fit">Whole image</string>
+    <string name="fit_mode_stretch">Stretch</string>
+    <string name="fit_mode_hint">Fill: no black bars, may crop a little. Whole image: nothing cropped, black bars. Stretch: fills everything, slightly distorted. Changes live.</string>
+    <string name="fit_shape_title">Panel shape for Android Auto</string>
+    <string name="fit_shape_manual">Manual: %1$d × %2$d. Android Auto lays out its screen for this shape.</string>
+    <string name="fit_shape_off">Off: Android Auto uses its standard shape.</string>
+    <string name="fit_shape_auto_is">Automatic: %1$d × %2$d (from your bike).</string>
+    <string name="fit_shape_auto_unknown">Automatic: not known yet (connect once).</string>
+    <string name="fit_shape_from_frame">= yellow frame</string>
+    <string name="fit_shape_save">Save size</string>
+    <string name="fit_shape_auto">Automatic</string>
+    <string name="fit_shape_hint">If the map looks cropped or squashed after framing, tap \"= yellow frame\" so Android Auto draws for exactly that size. Works for vertical panels too. This one needs Android Auto to restart.</string>
+    <string name="fit_shape_invalid">Enter a width and height (16 or more)</string>
+    <string name="fit_shape_reconnect">The new shape is applied when Android Auto restarts. Restart now? The dash goes black for a few seconds.</string>
+    <string name="fit_shape_reconnect_now">Restart now</string>
+    <string name="fit_shape_reconnect_later">Later</string>
+    <string name="fit_shape_saved_next">Saved: applied on the next connection</string>
+    <string name="fit_undo">Undo</string>
+    <string name="fit_reset">Bike default</string>
+    <string name="fit_done">Done</string>
+    <string name="fit_more_options">Resolution, orientation and the old margin pages: back in Settings → Screen &amp; display ←</string>
+    <string name="bt_trigger_channel">Bike detected</string>
+    <string name="bt_trigger_title">%1$s is on</string>
+    <string name="bt_trigger_text">Tap to connect to the dash</string>
+    <string name="mic_perm_title">Microphone for voice commands</string>
+    <string name="mic_perm_message">To use \"Ok Google\", the intercom voice button or the watch while connected, Z150X needs the microphone.\n\nPick \"While using the app\". With \"Only this time\" or \"Ask every time\" voice can stop working mid-ride.</string>
+    <string name="mic_perm_allow">Allow</string>
+    <string name="mic_perm_settings">Open settings</string>
+    <string name="mic_perm_not_now">Not now</string>
+</resources>

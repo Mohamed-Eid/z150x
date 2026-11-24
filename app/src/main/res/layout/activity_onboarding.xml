@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Z150X onboarding: a road progress bar over four steps (language, permissions, Android Auto, scan). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ob_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="20dp">
+
+    <dev.zanderp.opencfmoto.RideProgressView
+        android:id="@+id/ob_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1">
+
+        <include
+            android:id="@+id/ob_step0"
+            layout="@layout/ob_step_language" />
+
+        <include
+            android:id="@+id/ob_step1"
+            layout="@layout/ob_step_permissions"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/ob_step2"
+            layout="@layout/ob_step_aa"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/ob_step3"
+            layout="@layout/ob_step_scan"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

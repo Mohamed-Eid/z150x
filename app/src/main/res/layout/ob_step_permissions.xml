@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ob_perm_title"
+        style="@style/Z.Title"
+        android:text="@string/z_ob_gear_up" />
+
+    <TextView
+        style="@style/Z.Sub"
+        android:text="@string/z_ob_perm_sub" />
+
+    <LinearLayout
+        android:id="@+id/ob_perm_rows"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/Z.Row">
+            <ImageView style="@style/Z.RowIcon" android:src="@drawable/ic_z_wifi" />
+            <LinearLayout style="@style/Z.RowText">
+                <TextView style="@style/Z.RowTitle" android:text="@string/z_perm_nearby" />
+                <TextView style="@style/Z.RowSub" android:text="@string/z_perm_nearby_sub" />
+            </LinearLayout>
+            <ImageView android:id="@+id/ob_ok_nearby" style="@style/Z.Check" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Z.Row">
+            <ImageView style="@style/Z.RowIcon" android:src="@drawable/ic_z_pin" />
+            <LinearLayout style="@style/Z.RowText">
+                <TextView style="@style/Z.RowTitle" android:text="@string/z_perm_location" />
+                <TextView style="@style/Z.RowSub" android:text="@string/z_perm_location_sub" />
+            </LinearLayout>
+            <ImageView android:id="@+id/ob_ok_location" style="@style/Z.Check" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Z.Row">
+            <ImageView style="@style/Z.RowIcon" android:src="@drawable/ic_z_camera" />
+            <LinearLayout style="@style/Z.RowText">
+                <TextView style="@style/Z.RowTitle" android:text="@string/z_perm_camera" />
+                <TextView style="@style/Z.RowSub" android:text="@string/z_perm_camera_sub" />
+            </LinearLayout>
+            <ImageView android:id="@+id/ob_ok_camera" style="@style/Z.Check" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Z.Row">
+            <ImageView style="@style/Z.RowIcon" android:src="@drawable/ic_z_bell" />
+            <LinearLayout style="@style/Z.RowText">
+                <TextView style="@style/Z.RowTitle" android:text="@string/z_perm_notif" />
+                <TextView style="@style/Z.RowSub" android:text="@string/z_perm_notif_sub" />
+            </LinearLayout>
+            <ImageView android:id="@+id/ob_ok_notif" style="@style/Z.Check" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/ob_perm_allow"
+        style="@style/Z.Primary"
+        android:text="@string/z_allow_all" />
+</LinearLayout>

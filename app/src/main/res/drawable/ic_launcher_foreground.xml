@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Z150X launcher foreground: the red Connect ring with the Z150X line art traced from the real scooter. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:fillColor="#00000000" android:strokeColor="#E0261C" android:strokeWidth="4"
+        android:pathData="M54,25 A29,29 0 1,1 53.99,25 Z" />
+    <group android:translateX="32" android:translateY="39.9" android:scaleX="0.176" android:scaleY="0.176">
+        <path android:fillColor="#00000000" android:strokeColor="#F4F4F5" android:strokeWidth="9"
+            android:strokeLineJoin="round" android:strokeLineCap="round"
+            android:pathData="M147.5 0.0 L150.3 0.3 L153.3 1.9 L155.0 6.4 L155.0 13.3 L157.2 20.8 L161.7 20.8 L163.9 22.8 L169.7 33.6 L172.2 36.1 L174.2 35.3 L175.3 37.2 L183.9 38.9 L184.4 36.9 L183.1 35.6 L185.8 30.3 L184.7 27.8 L186.7 21.4 L188.3 20.0 L204.7 37.2 L210.8 45.0 L211.1 45.6 L209.7 45.6 L213.1 48.6 L213.9 51.4 L218.1 55.8 L224.4 67.8 L227.8 77.8 L221.7 76.7 L221.9 77.8 L224.7 78.9 L226.1 80.8 L222.8 82.8 L223.1 87.5 L214.4 90.0 L213.6 91.1 L229.2 96.7 L241.4 103.9 L244.7 106.9 L241.7 107.5 L245.6 112.8 L248.6 120.3 L249.7 126.4 L249.2 135.0 L246.4 143.3 L242.2 149.7 L236.9 154.7 L229.2 159.2 L204.7 159.2 L195.6 153.6 L189.4 146.4 L185.6 137.2 L184.4 128.6 L180.3 142.2 L177.8 144.2 L126.9 140.8 L122.5 139.7 L117.2 136.9 L111.7 138.3 L106.7 138.1 L84.7 143.3 L70.3 145.6 L63.9 153.3 L54.4 159.2 L30.0 159.2 L21.9 154.4 L15.3 146.9 L10.8 137.2 L10.0 125.6 L13.1 115.3 L10.6 113.3 L10.6 106.7 L1.1 118.6 L0.6 119.2 L0.0 117.8 L1.9 110.0 L13.1 89.2 L12.5 86.4 L16.7 83.6 L16.7 82.5 L15.3 82.2 L15.8 78.3 L21.4 76.9 L16.1 74.7 L8.6 75.6 L8.3 74.7 L10.6 72.8 L15.8 71.4 L27.8 71.9 L28.9 71.1 L23.6 65.6 L20.8 64.7 L20.8 63.1 L15.0 52.2 L12.5 49.7 L21.7 49.7 L20.0 47.5 L12.2 44.7 L9.7 42.2 L24.2 42.5 L31.7 45.3 L71.1 46.9 L80.6 56.1 L88.3 60.0 L99.7 61.1 L116.7 60.6 L121.7 61.9 L129.7 69.2 L137.2 80.3 L137.2 82.8 L134.7 84.7 L134.4 88.1 L145.3 91.7 L154.2 88.6 L170.0 75.8 L154.4 51.9 L158.9 45.6 L164.4 42.8 L163.6 41.9 L157.8 45.0 L160.3 42.2 L160.6 36.9 L159.2 35.3 L156.9 35.0 L155.8 31.9 L155.3 33.3 L153.1 34.4 L148.6 34.2 L148.1 33.1 L145.8 35.0 L143.1 34.2 L141.7 32.5 L141.9 30.3 L146.7 28.1 L146.7 25.6 L150.0 22.5 L153.3 22.5 L154.4 23.3 L155.3 22.5 L155.3 18.1 L153.6 14.2 L151.7 12.5 L150.0 14.2 L147.8 14.7 L144.4 9.4 L143.6 3.6 L145.3 3.3 Z" />
+        <path android:fillColor="#00000000" android:strokeColor="#F4F4F5" android:strokeWidth="8"
+            android:pathData="M12,131 A29,29 0 1,0 70,131 A29,29 0 1,0 12,131 M185.5,131 A28.5,28.5 0 1,0 242.5,131 A28.5,28.5 0 1,0 185.5,131" />
+        <path android:fillColor="#E0261C" android:pathData="M211,53 L222,57 L228,76 L219,71 Z" />
+    </group>
+</vector>
