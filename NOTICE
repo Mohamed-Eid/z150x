@@ -1,0 +1,76 @@
+Z150X
+=====
+
+Wireless Android Auto on the Zontes Z150X dash.
+
+Copyright (C) 2026 Mohamed Eid <https://github.com/Mohamed-Eid>
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version. See the LICENSE file for the full text.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+Source code:     https://github.com/Mohamed-Eid/z150x
+Privacy policy:  https://github.com/Mohamed-Eid/z150x/blob/main/PRIVACY.md
+
+--------------------------------------------------------------------------------
+Libraries
+--------------------------------------------------------------------------------
+
+Fetched at build time, not stored in this repository:
+
+  * AndroidX (core-ktx, appcompat, activity-ktx, constraintlayout, camera-x)
+    ........................................................ Apache License 2.0
+  * Material Components for Android ........................ Apache License 2.0
+  * osmdroid (ride map) .................................... Apache License 2.0
+  * Conscrypt (TLS) ........................................ Apache License 2.0
+  * Protocol Buffers (protobuf-java) ....................... BSD-3-Clause
+  * Google ML Kit Barcode Scanning ......................... Google APIs Terms of Service
+  * JUnit, Espresso (tests only) ........................... EPL-1.0, Apache License 2.0
+
+--------------------------------------------------------------------------------
+Fonts
+--------------------------------------------------------------------------------
+
+Bundled in app/src/main/res/font/ and app/src/main/res/font-ar/:
+
+  * Barlow and Barlow Condensed, Copyright 2017 The Barlow Project Authors,
+    SIL Open Font License 1.1 (licenses/OFL-Barlow.txt).
+  * Cairo, Copyright 2009 The Cairo Project Authors,
+    SIL Open Font License 1.1 (licenses/OFL-Cairo.txt).
+
+--------------------------------------------------------------------------------
+Map data
+--------------------------------------------------------------------------------
+
+The ride map shows OpenStreetMap tiles, and ride names come from OpenStreetMap's
+Nominatim service. Map data (C) OpenStreetMap contributors, available under the
+Open Database License (ODbL).
+
+--------------------------------------------------------------------------------
+Trademarks
+--------------------------------------------------------------------------------
+
+Z150X is an independent project. It is not affiliated with, endorsed by, or
+sponsored by Zontes, Carbit, Google or Android Auto. Zontes, Carbit, EasyConn,
+Android and Android Auto are trademarks of their respective owners and are used
+only to describe what the app works with.
+
+--------------------------------------------------------------------------------
+Code this app is built on
+--------------------------------------------------------------------------------
+
+The licence above requires these copyright notices to stay with the app.
+Z150X is a modified version, changed from 1 November 2026 onwards.
+
+  * OpenCfMoto: Copyright (C) 2026 Alexandru <https://alexandru.rocks> and the
+    OpenCfMoto contributors. AGPL-3.0.
+  * headunit-revived (the Android Auto receiver in the `aa` package): Copyright
+    (C) the headunit authors (mikereidis, headunit-reloaded, andreknieriem) and
+    their contributors. AGPL-3.0. https://github.com/andreknieriem/headunit-revived
+  * Earlier open-cfmoto work by coletz / dcoletto, richardbizik, BojanJ and
+    ionutradu252.
