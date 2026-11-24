@@ -1,8 +1,9 @@
 # Z150X on Google Play — checklist
 
 Status on 24 November 2026: the code side is ready (the bundle builds, lint has no errors, the
-permissions are down to what the app uses) and the source repository is public. What is left is the
-release key (see below) and the Play Console work, by the account owner.
+permissions are down to what the app uses), the source repository is public, the app exists in Play
+Console as `com.z150x.app`, and the store listing and most App content forms are filled in. See
+"Decided on 24 November 2026" below.
 
 ## Build the bundle
 
@@ -30,18 +31,21 @@ Checked on the 1.7 bundle:
 | Signed with a release key | Z150X key (it becomes the *upload key*) |
 | No restricted permissions | no SMS, call log, background location, all-files, install-packages, accessibility or query-all-packages |
 
-## Decide before the first upload (cannot be changed later)
+## Decided on 24 November 2026
 
-**The application ID.** The `play` flavor is set to `com.z150x.app.play`; the sideloaded APK is
-`com.z150x.app`. Google Play never lets an app change its ID.
+**The application ID is `com.z150x.app`** for Google Play too (the `play` flavor no longer overrides
+it), and the app was created in Play Console under that ID. Google Play never lets an app change its
+ID. A phone that has the sideloaded APK must uninstall it once before installing from Play, because
+the two are signed with different keys.
 
-- Keep `com.z150x.app.play`: the Play app installs *next to* the sideloaded one. Riders who have the
-  APK move by hand (settings export / import in Advanced settings; rides are not exported).
-- Use `com.z150x.app` for Play too: one app. A rider with the sideloaded APK can update from Play
-  **only if** Play signs with the same key, which means choosing "use your own key" when enrolling
-  in Play App Signing and uploading `keystore/z150x-release.jks`. Otherwise they must uninstall first.
+**Signing.** The original release key was lost, so a new upload key was generated on 24 Nov 2026
+(`keystore/z150x-release.jks`, alias `z150x-upload`, SHA-256
+`FC:59:D7:47:5C:C3:41:05:28:A8:0B:9A:A7:4F:FE:1E:E8:AA:9E:75:B8:AF:A3:1C:F7:B7:E6:C6:4D:3A:CF:1C`).
+Google holds the app signing key (Play App Signing). Back up `keystore/` and `keystore.properties`
+outside the repo; if they are lost, ask Play support to reset the upload key.
 
-To switch, delete the `applicationId = "com.z150x.app.play"` line in `app/build.gradle.kts`.
+**Store images** are in `docs/store-assets/` (icon, feature graphic, four phone screenshots each in
+English and Arabic).
 
 ## Before submitting
 
@@ -54,7 +58,7 @@ To switch, delete the `applicationId = "com.z150x.app.play"` line in `app/build.
    November 2023 must run a **closed test with at least 12 testers for 14 days** before it can apply
    for production.
 3. **Store listing**: texts below; icon 512×512; feature graphic 1024×500; at least 2 phone
-   screenshots (4–8 is better) in Arabic and English. These images still have to be made.
+   screenshots (4–8 is better) in Arabic and English. Done: see `docs/store-assets/`.
 4. **App content** forms: see the answers below.
 5. **App access**: the reviewer cannot connect without a Zontes Z150X. Say so in "App access →
    instructions" and attach a short video of the app connecting on the bike, so the review does not
@@ -163,7 +167,9 @@ with other users, no violence, no purchases → the lowest rating.
 | Location → Approximate location | Not collected separately (nothing coarser than the two requests above is sent) |
 | Audio (microphone) | Not collected (passed to Android Auto on the phone; never stored or sent by the app) |
 | Photos | Not collected (the parked-bike photo stays on the phone) |
-| App activity, diagnostics, device IDs, contacts, messages, files, financial, health | Not collected |
+| App info and performance → Diagnostics | Collected: yes (by Google's ML Kit barcode scanner, which the QR scan uses: device and app info, performance figures, error codes). Shared: no. Ephemeral: no. Required. Purpose: analytics |
+| Device or other IDs | Collected: yes (ML Kit's per-installation identifier). Shared: no. Ephemeral: no. Required. Purpose: analytics |
+| App activity, contacts, messages, files, financial, health | Not collected |
 
 Why "precise": Google counts a position as approximate only when it is no finer than an area of
 3 km². Both requests are finer than that (about 100 m, and a square of about 1 km), so they go under

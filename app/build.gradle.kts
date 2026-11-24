@@ -70,7 +70,6 @@ android {
         }
         create("play") {
             dimension = "store"
-            applicationId = "com.z150x.app.play"
             buildConfigField("String", "STORE", "\"play\"")
         }
     }
