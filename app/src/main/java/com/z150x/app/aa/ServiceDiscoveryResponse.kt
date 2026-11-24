@@ -126,11 +126,11 @@ class ServiceDiscoveryResponse
 
             return Control.ServiceDiscoveryResponse.newBuilder().apply {
                 make = "Z150X"
-                model = "MotoPlay"
+                model = "Zontes 150X"
                 year = "2024"
                 vehicleId = "z150x"
-                headUnitModel = "CFDL16-6GUV"
-                headUnitMake = "CFMoto"
+                headUnitModel = "Z150X"
+                headUnitMake = "Z150X"
                 headUnitSoftwareBuild = "1"
                 headUnitSoftwareVersion = "0.1.0"
                 driverPosition = Control.DriverPosition.DRIVER_POSITION_LEFT
@@ -138,10 +138,10 @@ class ServiceDiscoveryResponse
                 hideProjectedClock = false
                 setDisplayName("Z150X")
                 setHeadunitInfo(Common.HeadUnitInfo.newBuilder().apply {
-                    setHeadUnitMake("CFMoto")
-                    setHeadUnitModel("CFDL16-6GUV")
+                    setHeadUnitMake("Z150X")
+                    setHeadUnitModel("Z150X")
                     setMake("Z150X")
-                    setModel("MotoPlay")
+                    setModel("Zontes 150X")
                     setYear("2024")
                     setVehicleId("z150x")
                     setHeadUnitSoftwareBuild("1")
