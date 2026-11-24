@@ -63,7 +63,11 @@ class TripDatesTest {
 
     // ── Dates follow the language in force, with Western digits in Arabic ──
 
-    private val ride = Trip("1", at(2026, 11, 24, 18, 5), at(2026, 11, 24, 19, 40), 12_500.0, 3_000_000L, 20f, emptyList())
+    // Lazy: the times must be worked out after cairo() has set the zone, not in the machine's own
+    // (CI runs in UTC, where an eager 18:05 came out as 20:05 Cairo time).
+    private val ride by lazy {
+        Trip("1", at(2026, 11, 24, 18, 5), at(2026, 11, 24, 19, 40), 12_500.0, 3_000_000L, 20f, emptyList())
+    }
 
     private fun hasArabicIndicDigits(s: String) = s.any { it in '٠'..'٩' || it in '۰'..'۹' }
 
